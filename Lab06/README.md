@@ -58,7 +58,7 @@
           <li>Oroche Yajo Paola Fernanda - poroche@unsa.edu.pe</li>
           <li>Estefanero Palma Rodrigo - restefanerop@unsa.edu.pe</li>
           <li>Quispe Mamani Jose Gabriel - josquispem@unsa.edu.pe</li>
-          <!-- Añade más integrantes según sea necesario -->
+          
         </ul>
       </td>
     </tr>
