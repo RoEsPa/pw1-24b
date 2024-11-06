@@ -29,13 +29,13 @@
 <tr><th colspan="6">INFORMACIÓN BÁSICA</th></tr>
 </theader>
 <tbody>
-<tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 2</td></tr>
-<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Vim - Git - GitHub</td></tr>
+<tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 1</td></tr>
+<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Git/GitHub CGI/Perl Files</td></tr>
 <tr>
-<td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2023 A</td><td>NRO. SEMESTRE:</td><td>III</td>
+<td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2024 b</td><td>NRO. SEMESTRE:</td><td>II</td>
 </tr>
 <tr>
-<td>FECHA INICIO::</td><td>01-May-2023</td><td>FECHA FIN:</td><td>07-May-2023</td><td>DURACIÓN:</td><td>04 horas</td>
+<td>FECHA INICIO::</td><td>04-Nov-2024</td><td>FECHA FIN:</td><td>10-Nov-2024</td><td>DURACIÓN:</td><td>04 horas</td>
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
@@ -48,10 +48,21 @@
 <tr><td colspan="6">DOCENTES:
 <ul>
 <li>Richart Smith Escobedo Quispe - rescobedoq@unsa.edu.pe</li>
-</ul>
-</td>
-</<tr>
-</tdbody>
+ </ul>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="6">
+        <strong>INTEGRANTES DEL GRUPO:</strong>
+        <ul>
+          <li>Oroche Yajo Paola Fernanda - poroche@unsa.edu.pe</li>
+          <li>Estefanero Palma Rodrigo - restefanerop@unsa.edu.pe</li>
+          <li>Quispe Mamani Jose Gabriel - josquispem@unsa.edu.pe</li>
+          <!-- Añade más integrantes según sea necesario -->
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 # Vim - Git - GitHub
