@@ -1,1 +1,74 @@
--
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Universidades</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Búsqueda de Universidades</h1>
+        
+        <div class="search-form">
+            <label for="codigo_entidad">Código de Entidad:</label>
+            <input type="text" id="codigo_entidad" name="codigo_entidad">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="tipo_gestion">Tipo de Gestión:</label>
+            <input type="text" id="tipo_gestion" name="tipo_gestion">
+
+            <label for="estado_licenciamiento">Estado de Licenciamiento:</label>
+            <input type="text" id="estado_licenciamiento" name="estado_licenciamiento">
+
+            <label for="fecha_inicio">Fecha de Inicio de Licenciamiento:</label>
+            <input type="date" id="fecha_inicio" name="fecha_inicio">
+
+            <label for="fecha_fin">Fecha de Fin de Licenciamiento:</label>
+            <input type="date" id="fecha_fin" name="fecha_fin">
+
+            <label for="periodo_licenciamiento">Periodo de Licenciamiento:</label>
+            <input type="text" id="periodo_licenciamiento" name="periodo_licenciamiento">
+
+            <label for="departamento">Departamento:</label>
+            <input type="text" id="departamento" name="departamento">
+
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia">
+
+            <label for="distrito">Distrito:</label>
+            <input type="text" id="distrito" name="distrito">
+
+            <label for="codigo_ubigeo">Código de Ubigeo:</label>
+            <input type="text" id="codigo_ubigeo" name="codigo_ubigeo">
+
+            <button type="button" onclick="buscar()">Buscar</button>
+        </div>
+
+        <div class="results">
+            <h2>Resultados</h2>
+            <div class="result-header">
+                <div>Código de Entidad</div>
+                <div>Nombre</div>
+                <div>Tipo de Gestión</div>
+                <div>Estado de Licenciamiento</div>
+                <div>Fecha de Inicio</div>
+                <div>Fecha de Fin</div>
+                <div>Periodo</div>
+                <div>Departamento</div>
+                <div>Provincia</div>
+                <div>Distrito</div>
+                <div>Código de Ubigeo</div>
+            </div>
+            <div class="result-body">
+                <!-- Aquí se agregarán los resultados de búsqueda dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
