@@ -5,7 +5,7 @@ use CGI qw(:standard);
 use CGI::Carp 'fatalsToBrowser';
 
 # Ruta del archivo CSV
-my $archivo_csv = "/ruta/al/archivo/Data_Universidades_LAB06.csv"; # Actualiza esta ruta
+my $archivo_csv = "Data_Universidades_LAB06.csv";
 
 # Obtén los parámetros del formulario
 my $codigo_entidad = param('codigo_entidad') || '';
@@ -24,63 +24,20 @@ my $codigo_ubigeo = param('codigo_ubigeo') || '';
 $fecha_inicio =~ s/-//g;
 $fecha_fin =~ s/-//g;
 
-# Imprimimos la cabecera HTML y el formulario
+# Imprimimos la cabecera HTML
 print header;
-print start_html(-title => "Buscar Universidades", -style => [{ -src => '../css/styles.css' }]);
+print start_html(-title => "Resultados de Búsqueda de Universidades", -style => [{ -src => '../css/styles.css' }]);
 
-print <<'HTML';
-<div class="container">
-    <h1>Búsqueda de Universidades</h1>
-    <form method="GET" action="/cgi-bin/buscar_universidades.pl">
-        <label for="codigo_entidad">Código de Entidad:</label>
-        <input type="text" name="codigo_entidad" id="codigo_entidad">
-
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre">
-
-        <label for="tipo_gestion">Tipo de Gestión:</label>
-        <input type="text" name="tipo_gestion" id="tipo_gestion">
-
-        <label for="estado_licenciamiento">Estado de Licenciamiento:</label>
-        <input type="text" name="estado_licenciamiento" id="estado_licenciamiento">
-
-        <label for="fecha_inicio">Fecha Inicio:</label>
-        <input type="date" name="fecha_inicio" id="fecha_inicio">
-
-        <label for="fecha_fin">Fecha Fin:</label>
-        <input type="date" name="fecha_fin" id="fecha_fin">
-
-        <label for="periodo_licenciamiento">Periodo de Licenciamiento:</label>
-        <input type="text" name="periodo_licenciamiento" id="periodo_licenciamiento">
-
-        <label for="departamento">Departamento:</label>
-        <input type="text" name="departamento" id="departamento">
-
-        <label for="provincia">Provincia:</label>
-        <input type="text" name="provincia" id="provincia">
-
-        <label for="distrito">Distrito:</label>
-        <input type="text" name="distrito" id="distrito">
-
-        <label for="codigo_ubigeo">Código de Ubigeo:</label>
-        <input type="text" name="codigo_ubigeo" id="codigo_ubigeo">
-
-        <button type="submit">Buscar</button>
-    </form>
-</div>
-HTML
-
-# Abrimos el archivo y buscamos coincidencias
 print "<div class='container'>";
-print "<h2>Resultados de la Búsqueda</h2>";
+print "<h1>Resultados de Búsqueda</h1>";
 print "<div class='results'>";
 print "<div class='result-header'>";
 print "<div>Código de Entidad</div><div>Nombre</div><div>Tipo de Gestión</div><div>Estado de Licenciamiento</div><div>Fecha de Inicio</div><div>Fecha de Fin</div><div>Periodo</div><div>Departamento</div><div>Provincia</div><div>Distrito</div><div>Código de Ubigeo</div>";
 print "</div>";
 print "<div class='result-body'>";
 
+# Abrimos el archivo y buscamos coincidencias
 open(my $fh, '<', $archivo_csv) or die "No se puede abrir el archivo '$archivo_csv': $!";
-my $encontrado = 0;
 
 while (my $linea = <$fh>) {
     chomp $linea;
@@ -107,18 +64,15 @@ while (my $linea = <$fh>) {
         next if ($inicio_licenciamiento > $fecha_fin || $fin_licenciamiento < $fecha_inicio);
     }
 
-    # Imprimimos la fila de resultados si hay coincidencia
+    # Imprimimos la fila de resultados
     print "<div class='result-row'>";
     print "<div>$campos[0]</div><div>$campos[1]</div><div>$campos[2]</div><div>$campos[3]</div><div>$campos[4]</div><div>$campos[5]</div><div>$campos[6]</div><div>$campos[7]</div><div>$campos[8]</div><div>$campos[9]</div><div>$campos[10]</div>";
     print "</div>";
-    $encontrado = 1;
 }
 
-print "<div class='result-row'>No se encontraron resultados.</div>" unless $encontrado;
 print "</div>"; # Cierra result-body
 print "</div>"; # Cierra results
 print "</div>"; # Cierra container
-
 print end_html;
-close($fh);
 
+close($fh);
