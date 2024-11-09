@@ -41,7 +41,7 @@
     <ul>
         <li><a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></li>
         <li><a href="https://guides.github.com/">https://guides.github.com/</a></li>        
-        <li><a href="https://www.w3schools.com/java/default.asp">https://www.w3schools.com/java/default.asp</a></li>
+        <li><a href="https://www.perl.org/get.html">https://www.perl.org/get.html</a></li>
     </ul>
 </td>
 </<tr>
@@ -55,27 +55,23 @@
       <td colspan="6">
         <strong>INTEGRANTES DEL GRUPO:</strong>
         <ul>
-          <li>Oroche Yajo Paola Fernanda - poroche@unsa.edu.pe</li>
           <li>Estefanero Palma Rodrigo - restefanerop@unsa.edu.pe</li>
           <li>Quispe Mamani Jose Gabriel - josquispem@unsa.edu.pe</li>
-          <!-- Añade más integrantes según sea necesario -->
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-# Vim - Git - GitHub
+# Git - GitHub - Perl
 
 [![License][license]][license-file]
 [![Downloads][downloads]][releases]
 [![Last Commit][last-commit]][releases]
 
-[![Debian][Debian]][debian-site]
 [![Git][Git]][git-site]
 [![GitHub][GitHub]][github-site]
-[![Vim][Vim]][vim-site]
-[![Java][Java]][java-site]
+[![Perl][Perl]][perl-site]
 
 #
 
@@ -83,15 +79,15 @@
 
 ### OBJETIVOS
 
-- Conocer el editor de texto Vim.
 - Aprender a manejar el sistema de control de versiones Git y utilizar GitHub para trabajar de manera colaborativa.
+- Hacer el uso de commits para observar las modificaciones.
 
 ### TEMAS
-- Editor Vim
-- Java
+- Docker
 - Git
 - GitHub
-
+- Perl
+- Expresiones Regulares
 <details>
 <summary>COMPETENCIAS</summary>
 
@@ -105,46 +101,44 @@
 
 ### MARCO CONCEPTUAL
 
-- Editor Vim
-    - Vim es un editor de texto muy eficiente para programar en consola que no tiene nada que envidiar a los editores gráficos.
+- Docker
+    - Docker es una plataforma que permite empaquetar, distribuir y ejecutar aplicaciones en contenedores aislados.
     
-- Instalar Vim en:
+- Instalar Docker en:
 
     - GNU/Linux
         - Para instalar Vim en cualquier distribución GNU/Linux use sus mismos repositorios
         - ```sh
-          apt-get install vim
+          sudo apt install docker-ce
           ```
 
 	- MS Windows
-        - Para descarga en sistemas MS Windows https://www.vim.org/download.php
-    
+        - Para descarga en sistemas MS Windows: https://www.docker.com/products/docker-desktop
+
 	- MacOS
-        - Para instalar Vim en sistemas MacOS puede usar brew
+        - Para instalar Docker en sistemas MacOS puede usar brew
         -   ```sh
-            brew install macvim
+            brew install --cask docker
             ```
 
 #
 
-- Java
-    - Java es un lenguaje de programación orientado a objetos
-    - La documentación de Java 11 se encuentra en: https://docs.oracle.com/javase/specs/jls/se11/html/index.html
-    - Un curso muy interesante en videos se puede encontrar en: https://www.youtube.com/playlist?list=PLw8RQJQ8K1yQDqPyDRzt-h8YlBj96OwMP
-    
-    - Instalar Java
+- Perl
+    - Perl es un lenguaje de programación usado principalmente para la manipulación de texto y desarrollo web.
+  
+    - Instalar Perl
 
         - GNU/Linux
             - Para descarga en sistemas GNU/Linux puede usar OpenJDK
             -   ```sh
-                apt-get install openjdk-11-jdk
+                sudo apt install perl
                 ```
             
         - MS Windows
-            - Para descarga en sistemas MS Windows https://www.oracle.com/java/technologies/downloads/
+            - Para descarga en sistemas Windows: https://www.perl.org/get.html
         
         - MacOS
-            - Para descarga en sistemas MacOS https://www.oracle.com/java/technologies/downloads/
+            - Para descarga en sistemas macOS: https://www.perl.org/get.html
 
 
 #
@@ -440,8 +434,7 @@ Primer repositorio en GitHub
 
 [last-commit]: https://img.shields.io/github/last-commit/rescobedoq/pw2?label=Last%20Commit
 
-[Debian]: https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white
-[debian-site]: https://www.debian.org/index.es.html
+
 
 [Git]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
 [git-site]: https://git-scm.com/
@@ -449,18 +442,13 @@ Primer repositorio en GitHub
 [GitHub]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
 [github-site]: https://github.com/
 
-[Vim]: https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white
-[vim-site]: https://www.vim.org/
-
-[Java]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white
-[java-site]: https://docs.oracle.com/javase/tutorial/
+[Perl]: https://img.shields.io/badge/Perl-%23345B91.svg?style=for-the-badge&logo=perl&logoColor=white
+[perl-site]: https://www.perl.org/get.html
 
 
-[![Debian][Debian]][debian-site]
 [![Git][Git]][git-site]
 [![GitHub][GitHub]][github-site]
-[![Vim][Vim]][vim-site]
-[![Java][Java]][java-site]
+
 
 [![License][license]][license-file]
 [![Downloads][downloads]][releases]
