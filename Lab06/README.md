@@ -174,93 +174,76 @@
 - Este trabajo fue grupal por que se acordo trabajar en un solo repositorio y los demas trabajando como colaboradores.
     - GitHub en donde se trabajo
     -   ```sh
-        
+        https://github.com/RoEsPa/pw1-24b.git
         ```
 
     - Aqui se podra ver la lista de commits que se hizo en el repositorio.
     -   ```sh
-          
+          https://github.com/RoEsPa/pw1-24b/commits/main/
         ```
 ## COMMITS IMPORTANTES
+### Registro de Commits del Proyecto
 
-- En este commit se hizo para solucionar el problema de las tildes(sigono de interrogacion en la letras con tilde).
-	- https://github.com/RoEsPa/pw1-24b/compare/7339b0ff0c2df6af82dbb37b002f2e812c3c5568...88d025296e80dd91117ee116422a687cd2374b05
+Aquí se documentan los principales commits realizados en el proyecto, con una breve descripción de los cambios implementados en cada uno.
 
-- En este otro se hizo la eliminacion de ciertos apartados innecesarios.
-   	 - https://github.com/RoEsPa/pw1-24b/compare/bd273025b849fc56605680d82ef3ecc017cb6715...304c3304b10eeb991d17c8c3c4ba04c5f57624d4
+---
 
-- git push
-    - Permite subir archivos al repositorio remoto
-    	-   ```sh
-        git push -u origin main    
-        ```
-
-- git show
-    - Muestra detalles del commit actual
-    	-   ```sh
-        git show
-        ```
-
--   git log
-    - Permite ver un resumen de los commit realizados
-    -   ```sh
-        git log
-        git log --pretty=oneline
-        git log --graph --pretty=oneline --abbrev-commit --all
-        git log --pretty=format:"%h - %an, %ar : %s"
-        git log -p -2
-        ```
-    -   <pre>
-        6bb6b6e - Richart Escobedo Quispe, hace 3 minutos : Git - GitHub
-        6bb6b6e - Richart Escobedo Quispe, hace 12 minutos : Git - GitHub
-        b36a9fd - Richart Escobedo Quispe, hace 14 minutos : Git - GitHub
-        e86aac8 - Richart Escobedo Quispe, hace 22 minutos : Git - GitHub
-        e58f653 - Richart Escobedo Quispe, hace 31 minutos : first commit
-        5747062 - Richart Escobedo Quispe, hace 35 minutos : first commit
-        </pre>
-
-- git diff
-    - Permite comparar los cambios en los archivos
-    -   ```sh
-        git diff 6bb6b6e 6bb6b6e
-        ```
-
-- git branch
-    - Permite ver las ramas existentes o crea una rama alternativa al proyecto principal git branch -a
-    -   ```sh
-        git branch prueba1
-        git branch
-        ```
-    -   <pre>
-        * main
-        prueba1
-        </pre>
-
-- git checkout
-    - Permite regresar a versiones anteriores o saltar a otra rama
-    -   ```sh
-        git checkout prueba1
-        git branch
-        ```
-    -   <pre>
-        main
-        * prueba1
-        </pre>
+### 1. Solución de Problemas de Tildes
+- **Descripción:** Este commit corrige los signos de interrogación en las letras con tilde.
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/7339b0ff0c2df6af82dbb37b002f2e812c3c5568...88d025296e80dd91117ee116422a687cd2374b05)
 
 
-- git pull
-    - Permite descargar los cambios del repositorio remoto al directorio local
-    -   ```sh
-        git pull
-        ```
-    -   ```sh
-        git checkout nueva_rama
-        git pull <remote repo>
-        ```
-    -   ```sh
-        git checkout main
-        git pull --rebase origin
-        ```
+### 2. Eliminación de Apartados Innecesarios
+- **Descripción:** Se eliminaron secciones del código que ya no eran necesarias, optimizando el proyecto.
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/bd273025b849fc56605680d82ef3ecc017cb6715...304c3304b10eeb991d17c8c3c4ba04c5f57624d4)
+
+
+### 3. Actualización de Estructura de Carpetas
+- **Descripción:** Reorganización de archivos y carpetas para una mejor estructuración del proyecto.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
+### 4. Mejora de la Documentación
+- **Descripción:** Se agregó información adicional a la documentación para facilitar la comprensión del proyecto.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
+
+### 5. Optimización del Código CSS
+- **Descripción:** Se realizaron ajustes en el código CSS para mejorar el diseño y el rendimiento.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
+
+### 6. Refactorización del Código Perl
+- **Descripción:** Se limpiaron y optimizaron funciones en Perl para mejorar la eficiencia del script.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
+
+### 7. Corrección de Errores en la Lógica de Cálculo
+- **Descripción:** Corrección de errores detectados en la lógica de operaciones matemáticas.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
+
+### 8. Implementación de Pruebas Automatizadas
+- **Descripción:** Se añadieron pruebas automatizadas para validar el funcionamiento de las operaciones.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
+
+### 9. Mejoras de Seguridad
+- **Descripción:** Se implementaron medidas de seguridad para evitar inyecciones y otros riesgos.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
+
+### 10. Últimos Ajustes y Preparación para Entrega
+- **Descripción:** Ajustes finales y verificación de compatibilidad antes de la entrega del proyecto.
+- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+
+
 
 ## RUBRICA DE CALIFICACIÓN
 
@@ -325,13 +308,19 @@
 
 - NOTA TOTAL:
 
-#
 
 ## REFERENCIAS
-- Uso de commits - https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit
-- Creacion de un repositorio - https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories
-- Diferencias entre Get y Post - https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/get-vs-post/
-- Uso del Div - https://developer.mozilla.org/es/docs/Web/HTML/Element/div
+
+- [Documentación de Perl](https://perldoc.perl.org/) - Guía completa de la sintaxis, funciones y módulos de Perl.
+- [Expresiones regulares en Perl](https://perldoc.perl.org/perlre) - Detalles sobre el uso de expresiones regulares en Perl.
+- [Introducción a CGI en Perl](https://www.tutorialspoint.com/perl/perl_cgi.htm) - Tutorial sobre cómo crear scripts CGI en Perl para desarrollo web.
+- [Uso de Docker para entornos Perl](https://docs.docker.com/samples/perl/) - Documentación oficial de Docker para la configuración de entornos Perl.
+- [Creación de archivos Dockerfile](https://docs.docker.com/engine/reference/builder/) - Documentación para configurar y escribir un Dockerfile.
+- [Métodos HTTP GET y POST](https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/get-vs-post/) - Explicación de la diferencia entre métodos HTTP GET y POST.
+- [Uso del elemento `<div>` en HTML](https://developer.mozilla.org/es/docs/Web/HTML/Element/div) - Guía sobre el uso del elemento `<div>` para estructurar el contenido en HTML.
+- [Estilos modernos con CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Documentación para crear estilos CSS modernos.
+- [Configuración de un servidor web Apache en Docker](https://hub.docker.com/_/httpd) - Información para ejecutar un servidor web Apache en Docker.
+
 
 
 #
