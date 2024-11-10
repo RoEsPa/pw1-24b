@@ -85,15 +85,7 @@
 - GitHub
 - Perl
 - Expresiones Regulares
-<details>
-<summary>COMPETENCIAS</summary>
-
-- C.c Diseña responsablemente sistemas, componentes o procesos para satisfacer necesidades dentro de restricciones realistas: económicas, medio ambientales, sociales, políticas, éticas, de salud, de seguridad, manufacturación y sostenibilidad.
-- C.m Construye responsablemente soluciones siguiendo un proceso adecuado llevando a cabo las pruebas ajustada a los recursos disponibles del cliente.
-- C.p Aplica de forma flexible técnicas, métodos, principios, normas, estándares y herramientas de ingeniería necesarias para la construcción de software e implementación de sistemas de información.
-
-</details>
-
+- 
 ## CONTENIDO DE LA GUÍA
 
 ### MARCO CONCEPTUAL
@@ -160,64 +152,52 @@
             brew install git
             ```
 
-#
+## EJECUCION DE LA PAGINA
        
-- git init
-    - Crea un nuevo proyecto local, se crean archivos en el directorio oculto .git
+- Contruccion de la imagen 
     -   ```sh
-        git init
+        docker build -t universidades .
         ```
 
-- git config
-    - Establece variables de configuración. Por ejemplo para los commits se necesita los datos del desarrollador. Se puede especificar el editor y hasta el tiempo que deseas almacenar tus credenciales en la cache y otras cosas más
+- Creacion del contenedor en el puerto 8097
     -   ```sh
-        git config --global user.name "Richart Smith Escobedo Quispe"
-        git config --global user.email richarteq@gmail.com
-        git config --list
-        git config user.name
-        git config --global core.editor "code --wait"
-        git config --global credential.helper 'cache --timeout=3600'
+        ocker run -d -p 8097:80 universidades
         ```
 
-- git status
-    - Permite verificar el estado de los archivos
+- link de la Pagina
     -   ```sh
-        git status
-        ```
-- git add
-    - Añade archivos al staging area. El punto "." agrega todos
-    -   ```sh
-        git add HolaMundo.java
-        git add .
+        http://localhost:8097/
         ```
 
-- git commit
-    - Sube los archivos al área de staging, en la máquina local. La opción -m permite escribir el mensaje en línea
+## REPOSITORIO EN DONDE SE TRABAJO
+
+- Este trabajo fue grupal por que se acordo trabajar en un solo repositorio y los demas trabajando como colaboradores.
+    - GitHub en donde se trabajo
     -   ```sh
-        git commit -m "Probando el Hola Mundo"    
+        
         ```
 
-- git clone
-    - Clona un repositorio remoto como un repositorio local, en el cual se puede hacer push
+    - Aqui se podra ver la lista de commits que se hizo en el repositorio.
     -   ```sh
-        git clone <URL_GITHUB>
+          
         ```
+## COMMITS IMPORTANTES
 
-- git remote
-    - Persigue un repositorio remoto para hacer push.
-    -   ```sh
-        git remote add origin <URL_GITHUB>
-        ```
+- En este commit se hizo para solucionar el problema de las tildes(sigono de interrogacion en la letras con tilde).
+	- https://github.com/RoEsPa/pw1-24b/compare/7339b0ff0c2df6af82dbb37b002f2e812c3c5568...88d025296e80dd91117ee116422a687cd2374b05
+
+- En este otro se hizo la eliminacion de ciertos apartados innecesarios.
+   	 - https://github.com/RoEsPa/pw1-24b/compare/bd273025b849fc56605680d82ef3ecc017cb6715...304c3304b10eeb991d17c8c3c4ba04c5f57624d4
 
 - git push
     - Permite subir archivos al repositorio remoto
-    -   ```sh
+    	-   ```sh
         git push -u origin main    
         ```
 
 - git show
     - Muestra detalles del commit actual
-    -   ```sh
+    	-   ```sh
         git show
         ```
 
@@ -282,136 +262,76 @@
         git pull --rebase origin
         ```
 
-#
+## RUBRICA DE CALIFICACIÓN
 
-## EJERCICIO RESUELTO POR EL DOCENTE
-Primer repositorio en GitHub
-- Creamos un nuevo proyecto en GitHub
-    - ![Nuevo Proyecto GitHub](github_proyecto_programacion.png)
+- En esta rubrica el alumno debe autocalificarse de manera consciente.
+  
+<div align="center">
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>ITEM</th>
+                <th>DESCRIPCIÓN</th>
+                <th>EXCELENTE</th>
+                <th>PROCESO</th>
+                <th>DEFICIENTE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Código fuente</strong></td>
+                <td>Hay porciones de código fuente importantes con numeración y explicaciones detalladas de sus funciones.</td>
+                <td align="center">4</td>
+                <td align="center">2</td>
+                <td align="center">1</td>
+            </tr>
+            <tr>
+                <td><strong>Ejecución</strong></td>
+                <td>Se incluyen ejecuciones/pruebas del código fuente explicadas gradualmente hasta llegar al código final del requerimiento del laboratorio.</td>
+                <td align="center">4</td>
+                <td align="center">2</td>
+                <td align="center">1</td>
+            </tr>
+            <tr>
+                <td><strong>Pregunta</strong></td>
+                <td>Se responde con completitud a la pregunta formulada en la tarea. (El profesor puede preguntar para refrendar calificación). Si no se le entregó pregunta, usted recopile información relevante para el laboratorio desde diferentes medios, referenciada correctamente (máximo 2 caras).</td>
+                <td align="center">4</td>
+                <td align="center">2</td>
+                <td align="center">1</td>
+            </tr>
+            <tr>
+                <td><strong>Ortografía</strong></td>
+                <td>El documento no muestra errores ortográficos.</td>
+                <td align="center">4</td>
+                <td align="center">2</td>
+                <td align="center">1</td>
+            </tr>
+            <tr>
+                <td><strong>Madurez</strong></td>
+                <td>El Informe muestra de manera general una evolución de la madurez del código fuente, explicaciones puntuales pero precisas y un acabado impecable. (El profesor puede preguntar para refrendar calificación).</td>
+                <td align="center">4</td>
+                <td align="center">2</td>
+                <td align="center">1</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><strong>CALIFICACIÓN</strong></td>
+                <td align="center"><strong>20</strong></td>
+                <td align="center"><strong>10</strong></td>
+                <td align="center"><strong>5</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-- Crearemos un repositorio local usando git init
-    -   ```sh
-        pwd
-        /home/richart/gits/proyecto
-        git init
-        ```
-
-- Crearemos un archivo Readme.md con contenido Markup
-    -   ```sh
-        echo "# Mi proyecto Git" > README.md
-        ```
-
-- Agregaremos este archivo al staging area usando git add .
-    -   ```sh
-        git status
-        ```
-    -   <pre>
-        En la rama main
-
-        No hay commits todavía
-
-        Archivos sin seguimiento:
-        (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
-        README.md
-        no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
-        </pre>
-    -   ```sh
-        git add README.md
-        ```
-
-- Hacemos un primer commit en nuestro repositorio local 
-    -   ```sh
-        git commit -m "Mi primer proyecto en github"
-        ```
-- Asociamos el repositorio local con el repositorio remoto 
-    -   ```sh
-        git remote add origin <URL_GITHUB>
-        ```
-
-- Actualizamos el repositorio remoto
-    -   ```sh
-        git push -u origin main
-        ```
-
-- Ahora podemos verificar en GitHub que nuestro repositorio se actualizó con el proyecto local
-    - ![Readme.md](Readme.md.png)
-
-- Cree una clase Java HolaMundo.java que imprima un saludo, compílelo, ignore archivos binarios, agregue archivo al stating area, haga commit y súbalo al repositorio GitHub.
-    -   ```sh
-        vim HolaMundo.java
-        ```
-    -   <pre>
-        public class HolaMundo
-        {
-            public static void main(String args[]) {
-            
-                /** */
-                System.out.println ("¡Hola mundo!");
-
-            }
-        }
-        </pre>
-    -   ```sh    
-        java -version
-        ```
-    -   <pre>
-        openjdk version "11.0.14" 2022-01-18
-        </pre>
-    -   ```sh
-        javac HolaMundo.java
-        java HolaMundo
-        ```
-    -   <pre>
-        ¡Hola mundo!
-        </pre>
-    -   ```sh
-        vim .gitignore
-        ```
-    -   <pre>
-        *.class
-        .gitignore
-        </pre>
-    -   ```sh
-        git add HolaMundo.java
-        git commit -m "Hola Mundo"
-        git remote <URL_GITHUB>
-        git push -u origin main
-        ```
-
-#
-
-## EJERCICIOS PROPUESTOS
-- Cree una cuenta de usuario en GitHub usando su correo institucional.
-- [opcional por ahora] Configure su cuenta de estudiante (https://education.github.com/pack).
-- Cree un nuevo proyecto personal y desarrolle el ejercicio resuelto en clase. Haga 3 commits como mínimo y muéstrelos. Commit para "¡Hola mundo!", otro para "Bienvenida al curso" y otro para imprimir su nombre.
-- Cree un proyecto grupal para resolver el siguiente problema: Se desea crear una clase Calculator en Java, que tenga las siguientes operaciones: add, sub, mul, div, mod; estas operaciones recibirán dos enteros y devolverán un entero. (Forme grupos de 3 a 5 personas). Cree ramas para cada integrante y cada cierto tiempo una las ramas al main. No elimine nada para evidenciar ramas, main y commits.
-- Debería haber minimo 7 commits:
-    - 1er commit - Creación de la plantilla "Calculator.java"
-    - 2do commit - Uniendo rama "ramma-add" al "main" para obtener metodo add().
-    - 3er commit - Uniendo rama "ramma-sub" al "main" para obtener metodo sub().
-    - 4to commit - Uniendo rama "ramma-mul" al "main" para obtener metodo mul().
-    - 5to commit - Uniendo rama "ramma-div" al "main" para obtener metodo div().
-    - 6to commit - Uniendo rama "ramma-mod" al "main" para obtener metodo mod().
-
-#
-
-## CUESTIONARIO
-- ¿Por qué Git y GitHub son herramientas importantes para el curso?
-- ¿Qué conductas éticas deberían promocionarse cuando se usa un Sistema de Control de Versiones?
-- ¿Qué son los entándares de codificación?
+- NOTA TOTAL:
 
 #
 
 ## REFERENCIAS
-- https://git-scm.com/book/es/v2
-- https://guides.github.com/
-- https://www.w3schools.com/java/default.asp
-
-- Nano vs. Emacs vs. Vim (Editor Wars!) - https://www.linuxtrainingacademy.com/nano-emacs-vim/
-- Emacs vs Vim - https://www.linuxteaching.com/article/emacs_vs_vim
-- Vim or Emacs? The Debate is over… - https://cmd.com/blog/vim-or-emacs-the-debate-is-over/
-- Por qué un editor de texto de hace 40 años machaca al "todopoderoso" Atom - https://www.xataka.com/aplicaciones/por-que-un-editor-de-texto-de-hace-40-anos-le-da-sopas-con-ondas-al-todopoderoso-atom
-
+- Uso de commits - https://www.atlassian.com/es/git/tutorials/saving-changes/git-commit
+- Creacion de un repositorio - https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories
+- Diferencias entre Get y Post - https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/get-vs-post/
+- Uso del Div - https://developer.mozilla.org/es/docs/Web/HTML/Element/div
 
 
 #
