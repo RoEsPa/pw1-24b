@@ -78,7 +78,7 @@ h1, h2 {
 
 .results {
     margin-top: 20px;
-    lex-grow: 1;
+    flex-grow: 1;
     min-height: 200px; 
     max-height: 400px; 
     overflow-y: auto;
