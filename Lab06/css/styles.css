@@ -4,19 +4,19 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 20px;
+    padding: 50px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 5000px;
     width: 100%;
     background: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -57,14 +57,21 @@ h1, h2 {
 
 .results {
     margin-top: 20px;
+    min-height: 200px; 
+    max-height: 400px; 
+    overflow-y: auto;
 }
 
 .result-header, .result-row {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     padding: 10px;
     font-size: 14px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #c5a99d;
+    justify-items: center; 
+    align-items: center;
+    border-radius: 40px;
+
 }
 
 .result-header {
@@ -80,3 +87,4 @@ h1, h2 {
 .result-row:nth-child(even) {
     background-color: #f1f1f1;
 }
+
