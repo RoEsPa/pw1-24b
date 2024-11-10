@@ -115,6 +115,7 @@ h1, h2 {
     }
 
     .result-header, .result-row {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
