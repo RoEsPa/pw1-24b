@@ -30,12 +30,13 @@
 </theader>
 <tbody>
 <tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 1</td></tr>
-<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Git/GitHub CGI/Perl Files</td></tr>
+<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Ejemplo Unificado y Archivo de Universidades Licenciadas
+</td></tr>
 <tr>
 <td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2024 b</td><td>NRO. SEMESTRE:</td><td>II</td>
 </tr>
 <tr>
-<td>FECHA INICIO::</td><td>04-Nov-2024</td><td>FECHA FIN:</td><td>10-Nov-2024</td><td>DURACIÓN:</td><td>04 horas</td>
+<td>FECHA INICIO:</td><td>04-Nov-2024</td><td>FECHA FIN:</td><td>10-Nov-2024</td><td>DURACIÓN:</td><td>04 horas</td>
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
