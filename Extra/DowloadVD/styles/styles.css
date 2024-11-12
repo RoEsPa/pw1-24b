@@ -1,0 +1,418 @@
+/* Reseteo de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Caja de contenido */
+.content-box {
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+.download-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del formulario */
+    width: 100%;
+}
+
+/* Estilos para las entradas y etiquetas del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+#video-url {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+}
+
+/* Estilos para las acciones del formulario */
+.form-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Botón de descarga */
+.download-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px; /* Asegura que el botón tenga un ancho mínimo */
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sección de directorios */
+.directories-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.config-selected {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.directories {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los botones de directorios */
+.directory-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Añadir espacio entre los botones */
+    margin-bottom: 20px;
+}
+
+.directory-button {
+    padding: 12px 15px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    margin-right: 0px;
+    flex: auto;  /* Asegura que el botón tome todo el ancho disponible en su contenedor */
+    min-width: 180px; /* Asegura un ancho mínimo para los botones */
+
+}
+
+.directory-button:last-child {
+    margin-right: 0;
+}
+
+.directory-button:hover {
+    background-color: #218838;
+}
+
+.directory-button i {
+    margin-right: 8px;
+}
+
+/* Estilos para los archivos y directorios */
+.directory-files {
+    font-size: 1rem;
+    color: #333;
+}
+
+.directory-files ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.directory-files label {
+    display: block;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.directory-files label:hover {
+    background-color: #e2e6ea;
+}
+
+/* Estilos para los checkboxes ocultos */
+.directory-checkbox,
+.file-checkbox {
+    display: none;
+}
+
+/* Estilos para directorios y archivos seleccionados */
+.directory-checkbox:checked + label,
+.file-checkbox:checked + label {
+    background-color: #007bff;
+    color: white;
+}
+
+.directory-checkbox:checked + label:hover,
+.file-checkbox:checked + label:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para subdirectorios */
+.sub-directory {
+    display: none;
+    padding-left: 20px;
+}
+
+.directory-checkbox:checked + label + .sub-directory {
+    display: block;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #070716;
+    color: #ccc;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Estilo para boton de guardar */
+.save-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px; /* Asegura que el botón tenga un ancho mínimo */
+}
+
+/* Estilos para la página de configuraciones */
+.config-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del formulario */
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Títulos de las secciones de configuración */
+.video-settings h3, .audio-settings h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Contenedor para las configuraciones de video y audio */
+.video-settings, .audio-settings {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+.video-settings {
+    background-color: #898c92ea; /* Fondo claro para la sección de video */
+}
+
+.audio-settings {
+    background-color: #898c92ea; /* Fondo más suave para la sección de audio */
+}
+
+/* Estilo para los grupos de opciones */
+.video-settings .form-group, .audio-settings .form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas */
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Estilos para las entradas de texto, select y otros campos */
+#input-format, #output-format, #video-resolution, #video-bitrate, #video-codec, #audio-sample-rate, #audio-channels, #audio-bitrate, #audio-codec {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #06048a;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+/* Estilos para los botones de acción (guardar configuración y cancelar) */
+.save-button, .cancel-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px; /* Asegura que el botón tenga un ancho mínimo */
+    margin-top: 20px;
+}
+
+.save-button:hover, .cancel-button:hover {
+    background-color: #0056b3;
+}
+
+/* Espaciado entre las secciones */
+.video-settings, .audio-settings {
+    margin-top: 20px;
+}
+
+/* Separadores entre secciones */
+.section-divider {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Estilos para la barra de progreso de conversión */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+/* Estilos generales para el formulario */
+.config-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #240886;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select:focus,
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="text"] {
+    padding: 10px;
+}
+
+/* Estilos para el campo de nombre de la configuración */
+.form-group input[type="text"] {
+    background-color: #333;
+}
+
+/* Estilo para el botón de guardar */
+.save-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+.save-button:focus {
+    outline: none;
+}
+
+/* Asegura que el botón y el campo de texto tengan una buena separación */
+.form-actions {
+    margin-top: 20px;
+}

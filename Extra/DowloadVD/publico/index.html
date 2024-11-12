@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarga de Videos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Descarga de Videos</h1>
+        <p>Ingresa el enlace del video que deseas descargar</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <section class="content-box">
+            <!-- Formulario para la URL del video -->
+            <form class="download-form" action="../scripts/procesar-conversion.pl" method="post">
+                <div class="form-group">
+                    <label for="video-url" class="form-label">URL del Video:</label>
+                    <input type="url" id="video-url" name="video-url" placeholder="https://ejemplo.com/video" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="download-button">Descargar</button>
+                </div>
+            </form>
+
+            <!-- Apartado de Directorios y Configuración -->
+            <div class="directories-section">
+                <div class="config-selected">
+                    <p><strong>Configuración seleccionada:</strong> Calidad Alta</p>
+                </div>
+
+                <div class="directories">
+                    <div class="directory-buttons">
+                        <button class="directory-button" onclick="location.href='../publico/configuraciones.html';">Configuraciones</button>
+                        
+                        <!-- Formulario de convertir -->
+                        <form action="../scripts/procesar-conversion.pl" method="post">
+                            <!-- Aquí debes pasar dinámicamente el archivo seleccionado -->
+                            <input type="hidden" name="archivo" value="archivo_a_convertir">
+                            <button type="submit" class="directory-button">Convertir</button>
+                        </form>
+                        
+                        <!-- Formulario de borrar -->
+                        <form action="../scripts/procesar-archivo.pl" method="post">
+                            <!-- Aquí también el archivo seleccionado debe ser dinámico -->
+                            <input type="hidden" name="archivo" value="archivo_a_borrar">
+                            <button type="submit" class="directory-button">Borrar</button>
+                        </form>
+                    </div>
+
+                    <div class="directory-files">
+                        <p><strong>Archivos y Directorios:</strong></p>
+                        <div id="directory-structure">
+                            <!-- Aquí se mostrará la estructura de directorios -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2023 Descargador de Videos</p>
+    </footer>
+</body>
+</html>
