@@ -5,10 +5,16 @@ use CGI qw(:standard);
 use CGI::Carp 'fatalsToBrowser';
 use Text::CSV;
 use utf8;
+use Encode;  
 
 # Asegura que la salida STDOUT está en UTF-8
 binmode STDOUT, ':encoding(UTF-8)';
 my $archivo_csv = "Data_Universidades_LAB06.csv";
+
+for my $param (param()) {
+    my $value = param($param);
+    param($param, decode_utf8($value));  
+}
 
 # Obtiene los parámetros del formulario
 my $codigo_entidad = param('codigo_entidad') || '';
@@ -40,6 +46,12 @@ print <<HTML;
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="../img/video.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>  
     <div class="container">
         <h1>Búsqueda de Universidades</h1>
         <form action="../cgi-bin/buscar_universidades.pl" method="GET" class="search-form">
@@ -274,15 +286,15 @@ while (my $row = $csv->getline($fh)) {
 
     # Aplica filtros basados en los parámetros de búsqueda usando el índice del campo
     next if ($codigo_entidad && $cod ne $codigo_entidad);                 # Campo 1
-    next if ($nombre && $nom !~ /\Q$nombre\E/i);                          # Campo 2
-    next if ($tipo_gestion && $tipo !~ /\Q$tipo_gestion\E/i);             # Campo 3
-    next if ($estado_licenciamiento && $estado !~ /\Q$estado_licenciamiento\E/i); # Campo 4
+    next if ($nombre && $nom !~ /\Q$nombre\E/iu);                          # Campo 2
+    next if ($tipo_gestion && $tipo !~ /\Q$tipo_gestion\E/iu);             # Campo 3
+    next if ($estado_licenciamiento && $estado !~ /\Q$estado_licenciamiento\E/iu); # Campo 4
     next if ($fecha_inicio && $f_inicio ne $fecha_inicio);                # Campo 5
     next if ($fecha_fin && $f_fin ne $fecha_fin);                         # Campo 6
     next if ($periodo_licenciamiento && $periodo ne $periodo_licenciamiento); # Campo 7
-    next if ($departamento && $depto !~ /\Q$departamento\E/i);            # Campo 8
-    next if ($provincia && $prov !~ /\Q$provincia\E/i);                   # Campo 9
-    next if ($distrito && $dist !~ /\Q$distrito\E/i);                     # Campo 10
+    next if ($departamento && $depto !~ /\Q$departamento\E/iu);            # Campo 8
+    next if ($provincia && $prov !~ /\Q$provincia\E/iu);                   # Campo 9
+    next if ($distrito && $dist !~ /\Q$distrito\E/iu);                     # Campo 10
     next if ($codigo_ubigeo && $ubigeo ne $codigo_ubigeo);                # Campo 11
 
     # Genera el enlace de Google Maps usando las coordenadas lat y long
@@ -302,7 +314,7 @@ while (my $row = $csv->getline($fh)) {
         <div>$prov</div>
         <div>$dist</div>
         <div>$ubigeo</div>
-        <div><a href="$google_maps_link" target="_blank">Ver en mapa</a></div>
+        <div><a href="$google_maps_link" target="_blank" class="btn-mapa">Ver en mapa</a></div>
     </div>
 HTML
 }

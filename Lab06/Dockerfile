@@ -44,6 +44,10 @@ COPY ./cgi-bin/Data_Universidades_LAB06.csv /usr/lib/cgi-bin/Data_Universidades_
 COPY ./html/index.html /var/www/html/index.html
 COPY ./css/styles.css /var/www/html/css/styles.css
 
+# Copiar el archivo de video al directorio de archivos estáticos de Apache
+COPY ./img/video.mp4 /var/www/html/img/video.mp4
+
+
 # Configurar Apache para ejecutar scripts CGI
 RUN echo '<VirtualHost *:80>\n\
     ServerAdmin webmaster@localhost\n\

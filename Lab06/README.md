@@ -162,7 +162,7 @@
 
 - Creacion del contenedor en el puerto 8097
     -   ```sh
-        ocker run -d -p 8097:80 universidades
+        docker run -d -p 8097:80 universidades
         ```
 
 - link de la Pagina
