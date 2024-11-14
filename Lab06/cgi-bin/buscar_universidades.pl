@@ -8,7 +8,6 @@ use utf8;
 
 # Asegura que la salida STDOUT está en UTF-8
 binmode STDOUT, ':encoding(UTF-8)';
-
 my $archivo_csv = "Data_Universidades_LAB06.csv";
 
 # Obtiene los parámetros del formulario
