@@ -244,7 +244,7 @@ Aquí se documentan los principales commits realizados en el proyecto, con una b
 - **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/76988d4b7e170712e35924e5777b72446635fdc4...bc6ac06ee33c91430a5696da3860527e1d270b0c)
 
 ## APARIENCIA FINAL DE LA PAGINA WEB
-
+![Apariencia Final](img/AparienciaFinal.png)
 
 
 ## RUBRICA DE CALIFICACIÓN
