@@ -36,7 +36,7 @@
 <td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2024 b</td><td>NRO. SEMESTRE:</td><td>II</td>
 </tr>
 <tr>
-<td>FECHA INICIO:</td><td>04-Nov-2024</td><td>FECHA FIN:</td><td>10-Nov-2024</td><td>DURACIÓN:</td><td>04 horas</td>
+<td>FECHA INICIO:</td><td>04-Nov-2024</td><td>FECHA FIN:</td><td>17-Nov-2024</td><td>DURACIÓN:</td><td>04 horas</td>
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
@@ -152,6 +152,18 @@
         -   ```sh
             brew install git
             ```
+## EJERCICIO DEL LABORATORIO N*6
+### 1. Unificado y Archivo de Universidades Licenciadas
+  - Escribir un programa web que utilice CGI, HTML, CSS, que haga consultas sobre el archivo de universidades licenciadas.  El archivo
+     debe ser procesado con una expresión regular para extraer todos sus campos, al estilo del ejemplo unificado.
+	La consulta debe ser una respuesta a un formulario html.
+  - Se debe de trabajar con GIT - GITHUB
+### 2. Campos de Busqueda
+  - NOMBRE
+  - TIPO_GESTION
+  - ESTADO_LICENCIAMIENTO
+  - FECHA_INICIO_LICENCIAMIENTO, FECHA_FIN_LICENCIAMIENTO (PERIODO_LICENCIAMIENTO)
+  - DEPARTAMENTO/PROVINCIA/DISTRITO
 
 ## EJECUCION DE LA PAGINA
        
@@ -189,60 +201,49 @@ Aquí se documentan los principales commits realizados en el proyecto, con una b
 
 ---
 
-### 1. Solución de Problemas de Tildes
-- **Descripción:** Este commit corrige los signos de interrogación en las letras con tilde.
+### 1. Script de búsqueda en Perl y archivo CSV
+- **Descripción:** Se da la agregación del archivo csv y del script de búsqueda en el repositorio.
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/6ebe40147752c3c310fb0af1ae8c97979db2f3cf...71d15810af22143bde7fb96041a1ba2bc856d4e3)
+
+
+### 2. Búsqueda por el tipo de gestión
+- **Descripción:** Se agrega un perl para la "Búsqueda por el tipo de gestión".
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/92be900d3fcc4ecf3f3239dd4097352165723619...31e1f33d5b755bd324ff587710700b997443bb8a)
+
+
+### 3. Búsqueda por Fechas
+- **Descripción:** Se agrega un perl para la "Búsqueda por fecha".
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/c0721a24a9bafed5ee236482446a05ac0501328c...a52092806683d73194992da22c96b6d67255b947)
+
+
+### 4. Búsqueda por el Lugar
+- **Descripción:** Se agrega un perl para la "Búsqueda por Departamento-Provincia-Distrito".
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/a52092806683d73194992da22c96b6d67255b947...839abbb25032cdeb98c5b07f13cb4025db1b689a)
+
+
+### 5. Creación del css y html
+- **Descripción:** Se crea la primera base de lo que es la página web.
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/839abbb25032cdeb98c5b07f13cb4025db1b689a...8538ed60783510b2faaa607da30763016c656939)
+- **Este seria la primera vista de ella...**
+![Captura de pantalla](codigoprevio/Captura%20desde%202024-11-06%2023-49-41.png)
+
+### 6. Correción en el cgi-bin
+- **Descripción:** El cambio principal es la validación de las entradas del formulario para garantizar la seguridad y prevenir inyecciones de código, mejorando la confiabilidad del script.
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/commit/8aa645d64db2deafcb8cef97e48abafc01fbd5d1#diff-059487c65404d3f4bb56b6a5aae79908b897b829ff1564b9246f0e34c682a635R1-R3)
+
+
+
+### 7. Corrección en las Tildes
+- **Descripción:** En este commit, se hicieron cambios para que el programa pueda mostrar correctamente letras con tildes y otros caracteres especiales.
 - **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/7339b0ff0c2df6af82dbb37b002f2e812c3c5568...88d025296e80dd91117ee116422a687cd2374b05)
 
 
-### 2. Eliminación de Apartados Innecesarios
-- **Descripción:** Se eliminaron secciones del código que ya no eran necesarias, optimizando el proyecto.
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/bd273025b849fc56605680d82ef3ecc017cb6715...304c3304b10eeb991d17c8c3c4ba04c5f57624d4)
 
+### 8. Mejora visual de la Página Web
+- **Descripción:** Aqui se da las ultimas modificaciones al css y al html para el apartado de la Página Web.
+- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/76988d4b7e170712e35924e5777b72446635fdc4...bc6ac06ee33c91430a5696da3860527e1d270b0c)
 
-### 3. Actualización de Estructura de Carpetas
-- **Descripción:** Reorganización de archivos y carpetas para una mejor estructuración del proyecto.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
-
-
-### 4. Mejora de la Documentación
-- **Descripción:** Se agregó información adicional a la documentación para facilitar la comprensión del proyecto.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
-
-
-
-### 5. Optimización del Código CSS
-- **Descripción:** Se realizaron ajustes en el código CSS para mejorar el diseño y el rendimiento.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
-
-
-
-### 6. Refactorización del Código Perl
-- **Descripción:** Se limpiaron y optimizaron funciones en Perl para mejorar la eficiencia del script.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
-
-
-
-### 7. Corrección de Errores en la Lógica de Cálculo
-- **Descripción:** Corrección de errores detectados en la lógica de operaciones matemáticas.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
-
-
-
-### 8. Implementación de Pruebas Automatizadas
-- **Descripción:** Se añadieron pruebas automatizadas para validar el funcionamiento de las operaciones.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
-
-
-
-### 9. Mejoras de Seguridad
-- **Descripción:** Se implementaron medidas de seguridad para evitar inyecciones y otros riesgos.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
-
-
-
-### 10. Últimos Ajustes y Preparación para Entrega
-- **Descripción:** Ajustes finales y verificación de compatibilidad antes de la entrega del proyecto.
-- **Enlace:** [Ver Cambios](URL_DEL_COMMIT)
+## APARIENCIA FINAL DE LA PAGINA WEB
 
 
 
@@ -266,48 +267,48 @@ Aquí se documentan los principales commits realizados en el proyecto, con una b
                 <td><strong>Código fuente</strong></td>
                 <td>Hay porciones de código fuente importantes con numeración y explicaciones detalladas de sus funciones.</td>
                 <td align="center">4</td>
-                <td align="center">2</td>
-                <td align="center">1</td>
+                <td align="center"></td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td><strong>Ejecución</strong></td>
                 <td>Se incluyen ejecuciones/pruebas del código fuente explicadas gradualmente hasta llegar al código final del requerimiento del laboratorio.</td>
                 <td align="center">4</td>
-                <td align="center">2</td>
-                <td align="center">1</td>
+                <td align="center"></td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td><strong>Pregunta</strong></td>
                 <td>Se responde con completitud a la pregunta formulada en la tarea. (El profesor puede preguntar para refrendar calificación). Si no se le entregó pregunta, usted recopile información relevante para el laboratorio desde diferentes medios, referenciada correctamente (máximo 2 caras).</td>
-                <td align="center">4</td>
+                <td align="center"></td>
                 <td align="center">2</td>
-                <td align="center">1</td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td><strong>Ortografía</strong></td>
                 <td>El documento no muestra errores ortográficos.</td>
                 <td align="center">4</td>
-                <td align="center">2</td>
-                <td align="center">1</td>
+                <td align="center"></td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td><strong>Madurez</strong></td>
                 <td>El Informe muestra de manera general una evolución de la madurez del código fuente, explicaciones puntuales pero precisas y un acabado impecable. (El profesor puede preguntar para refrendar calificación).</td>
-                <td align="center">4</td>
+                <td align="center"></td>
                 <td align="center">2</td>
-                <td align="center">1</td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><strong>CALIFICACIÓN</strong></td>
-                <td align="center"><strong>20</strong></td>
-                <td align="center"><strong>10</strong></td>
-                <td align="center"><strong>5</strong></td>
+                <td align="center"><strong>12</strong></td>
+                <td align="center"><strong>4</strong></td>
+                <td align="center"><strong></strong></td>
             </tr>
         </tbody>
     </table>
 </div>
 
-- NOTA TOTAL:
+- NOTA TOTAL: 16
 
 
 ## REFERENCIAS
