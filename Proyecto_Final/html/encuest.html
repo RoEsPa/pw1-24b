@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles_encuest.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <!-- Imagen a la izquierda -->
+            <div class="image-section">
+                <img src="../data/UploadFotoPath.jpeg" alt="Persona a calificar">
+            </div>
+
+            <!-- Encuesta a la derecha -->
+            <form class="survey-section">
+                <h2>Encuesta</h2>
+                <div class="question">
+                    <label for="question1">Pregunta 1</label>
+                    <select id="question1" required>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="question2">Pregunta 2</label>
+                    <select id="question2" required>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="question3">Pregunta 3</label>
+                    <select id="question3" required>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="question4">Pregunta 4</label>
+                    <select id="question4" required>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="opinion">Opinión</label>
+                    <textarea id="opinion" rows="4" placeholder="Escribe tu opinión"></textarea>
+                </div>
+                <button class="btn" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
