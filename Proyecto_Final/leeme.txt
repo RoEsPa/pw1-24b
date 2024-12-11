@@ -1,0 +1,6 @@
+** CREACION DE PUERTOS
+docker build -t proyecto_apache .
+
+docker run -d -p 8094:8094 --name contenedor_apache proyecto_apache
+
+http://localhost:8094
