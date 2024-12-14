@@ -10,4 +10,7 @@ docker run -p 8080:80 -d mascotas-app
 
 #Abre en tu navegador:
 
-http://localhost:8080/echo.pl
+http://localhost:8080/cgi-bin/echo.pl
+
+
+https://github.com/RoEsPa/pw1-24b/tree/main/mascotas
