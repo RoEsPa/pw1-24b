@@ -4,6 +4,8 @@ FROM ubuntu:22.04
 # Actualizar el sistema e instalar Apache2
 RUN apt-get update && apt-get install -y apache2 && \
     apt-get clean
+    apt-get install -y build-essential libmysqlclient-dev
+    cpan DBD::mysql
 
 # Crear los directorios necesarios para el proyecto
 RUN mkdir -p /var/www/html/css /var/www/html/js /var/www/html/galery
