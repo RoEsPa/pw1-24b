@@ -9,7 +9,7 @@
 }
 
 body {
-    background: url(../galery/background.jpg) no-repeat;
+    background: url(../galery/pagina/background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -278,17 +278,30 @@ body {
 }
 
 .image-section {
-    width: 40%;
+    width: 100%; /* La sección ocupará todo el espacio disponible */
     display: flex;
+    flex-direction: column; /* Coloca la imagen y el texto en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
     justify-content: center;
-    align-items: center;
-    padding: 0px;
+    padding: 10px; /* Espacio interno opcional */
 }
 
 .image-section img {
-    max-width: 100%;
-    border-radius: 10px;
+    width: 60%; /* Ocupa casi todo el ancho disponible */
+    height: 300px; /* Fuerza una altura específica */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
 }
+
+.teacher-name {
+    font-size: 18px; /* Tamaño de letra */
+    font-weight: 600; /* Texto más grueso */
+    text-align: center; /* Centrado horizontal */
+    color: #fff; /* Color del texto */
+}
+
+
 
 .survey-section {
     width: 60%;
