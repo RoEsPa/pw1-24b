@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+
+body {
+    background: url('../galery/pagina/panel/UNSA.png') no-repeat center center fixed; /* Imagen centrada y fija */
+    background-size: cover; /* Asegura que cubra toda la pantalla */
+    min-height: 100vh; /* Altura mínima igual a la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5); /* Color blanco semitransparente */
+    background-blend-mode: overlay; /* Combina la transparencia con la imagen de fondo */
+}
+
+
+.header {
+    background-color: rgba(139, 139, 139, 0.6); /* Fondo semitransparente */
+    text-align: center;  
+    width: 100%; 
+    position: relative; 
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Logo al extremo izquierdo y título centrado */
+    height: 80px; /* Igual a la altura del logo */
+    padding: 0; /* Elimina cualquier espacio adicional */
+}
+
+.logo {
+    width: auto; /* Mantén las proporciones originales */
+    height: 80px; /* Fija la altura del logo */
+    margin-left: 0; /* Elimina el margen izquierdo */
+}
+
+.overlay {
+    position: absolute; /* Posición absoluta para el título */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Asegura el centrado exacto */
+    display: flex;
+    align-items: center; /* Centra verticalmente el título */
+    height: 100%; /* Ocupa toda la altura de la cabecera */
+}
+
+h1 {
+    font-size: 36px; /* Tamaño del texto del título */
+    color: #FFFFFF; /* Color blanco */
+    margin: 0;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.container {
+    width: 100%;                /* Ancho completo */
+    max-width: 1200px;          /* Limita el ancho máximo a 1200px */
+    margin: 0 auto;             /* Centra el contenedor horizontalmente */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.professors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* 5 columnas fijas */
+    gap: 20px;
+    justify-items: center;  /* Centra las tarjetas dentro de las celdas */
+    width: 100%;
+    margin-top: 20px;  /* Asegura que haya un espacio entre el título y las tarjetas */
+}
+
+.professor-card {
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: none; /* Eliminado el efecto de sombra */
+    transition: transform 0.3s ease;
+}
+
+.professor-card:hover {
+    transform: translateY(-10px);
+}
+
+.professor-card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 6px solid rgb(124, 55, 55); /* Borde alrededor de la imagen */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.professor-card img:hover {
+    transform: scale(1.1);
+}
+
+.professor-card p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .professors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));  /* Ajuste para pantallas más pequeñas */
+    }
+
+    .professor-card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .professor-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .professor-card p {
+        font-size: 10px;
+    }
+}
