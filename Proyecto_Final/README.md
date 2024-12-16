@@ -30,13 +30,13 @@
 </theader>
 <tbody>
 <tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 1</td></tr>
-<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Ejemplo Unificado y Archivo de Universidades Licenciadas
+<tr><td>TÍTULO DEL PROYECTO:</td><td colspan="5">ENCUEST
 </td></tr>
 <tr>
-<td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2024 b</td><td>NRO. SEMESTRE:</td><td>II</td>
+<td>PROYECTO:</td><td>01</td><td>AÑO LECTIVO:</td><td>2024 b</td><td>NRO. SEMESTRE:</td><td>II</td>
 </tr>
 <tr>
-<td>FECHA INICIO:</td><td>04-Nov-2024</td><td>FECHA FIN:</td><td>17-Nov-2024</td><td>DURACIÓN:</td><td>04 horas</td>
+<td>FECHA INICIO:</td><td>12-Nov-2024</td><td>FECHA FIN:</td><td>16-Dic-2024</td><td>DURACIÓN:</td><td>04 horas</td>
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
@@ -77,100 +77,45 @@
 
 ### OBJETIVOS
 
-- Aprender a manejar el sistema de control de versiones Git y utilizar GitHub para trabajar de manera colaborativa.
-- Hacer el uso de commits para observar las modificaciones.
+- Poner en practica lo aprendido tanto las clases de laboratorio como las de teoria.
+- Tener la capacidad de dominar los temas avanzados para realizar el proyecto.
 
-### TEMAS
+### TEMAS Y HERRAMIENTAS
 - Docker
 - Git
 - GitHub
 - Perl
-- Expresiones Regulares
-- 
+- JavaScript
+- AYAX
+- CRUD
+- Base de Datos
 ## CONTENIDO DE LA GUÍA
 
-### MARCO CONCEPTUAL
+### EXPLICACION DEL PROYECTO
+- El proyecto trata de un apartado de encuesta que va dirigido hacia los estudiantes, el cual falicitara la encuesta que se realiza cada que se finaliiza el semestre,
+  esta pagina tendra los siguientes apartados:
+  ### 1. INGRESO CON EL CORREO INSTITUCIONAL
+  - Esto se podra hacer de manera que garantize el anonimato del que realizara la encuesta, esto por el temor a que se pueda detectar al encuestador por el solo ingreso de su correo.
+  ![Ingreso](img/AparienciaFinal.png)
+  ### 2. APARTADO DE LOS DOCENTE
+  - Aqui se mostraran los Docentes de la Escuela, se podra vizualizar al docente y para la realizacion de la encuesta, solo se debera hacer click a la fotografia del docente.
+  ![Plana](img/AparienciaFinal.png)
+  ### 3. ENCUESTA
+  - En este aparatado se mostrara la encuesta que constara de 5 preguntas que se podran calificar con una escala del 1 al 5, tambien como ultimo apartado se podra dar una opinion del docente encuestado.
+  ![Encuesta](img/AparienciaFinal.png)
+  ### 4. ESCALA GENERAL DE CALIFICACION
+  - Al culminar la encuesta, se mostrara una pequeña calificación genral de todos los docentes, desde el menor calificado hasta el mayor calificado.
+  ![Escala](img/AparienciaFinal.png)
 
-- Docker
-    - Docker es una plataforma que permite empaquetar, distribuir y ejecutar aplicaciones en contenedores aislados.
+## OBEJTIVO DEL PROYECTO
+### 1. BIRNDAR FACILIDAD
+  - Este proyecto tiene como objetivo ayudar a la Escuela y tambien a la casa Agustin.
     
-- Instalar Docker en:
-
-    - GNU/Linux
-        - Para instalar Vim en cualquier distribución GNU/Linux use sus mismos repositorios
-        - ```sh
-          sudo apt install docker-ce
-          ```
-
-	- MS Windows
-        - Para descarga en sistemas MS Windows: https://www.docker.com/products/docker-desktop
-
-	- MacOS
-        - Para instalar Docker en sistemas MacOS puede usar brew
-        -   ```sh
-            brew install --cask docker
-            ```
-
-#
-
-- Perl
-    - Perl es un lenguaje de programación usado principalmente para la manipulación de texto y desarrollo web.
-  
-    - Instalar Perl
-
-        - GNU/Linux
-            - Para descarga en sistemas GNU/Linux puede usar OpenJDK
-            -   ```sh
-                sudo apt install perl
-                ```
-            
-        - MS Windows
-            - Para descarga en sistemas Windows: https://www.perl.org/get.html
-        
-        - MacOS
-            - Para descarga en sistemas macOS: https://www.perl.org/get.html
-
-
-#
-
-- Git
-    - Git es un sistema de control de versiones creado por Linus Torvalds. Es eficiente, confiable. 
-
-- Instalar Git
-
-	- GNU/Linux
-        - Para descarga en sistemas GNU/Linux desde https://git-scm.com/download/linux
-        -   ```sh
-            apt-get install git
-            ```
-        
-	- MS Windows
-        - Para descarga en sistemas MS Windows https://git-scm.com/download/win
+### 2. TRANSPARENCIA
+  - Esto se refiere a que se podra garantizar si el docente con mayor espectativas se vea reflejado en la escala general de todos los docentes.
     
-    - MacOS
-        - Para descarga en sistemas MacOS https://git-scm.com/download/mac
-        -   ```sh
-            brew install git
-            ```
-## EJERCICIO DEL LABORATORIO N*6
-### 1. Unificado y Archivo de Universidades Licenciadas
-  - Escribir un programa web que utilice CGI, HTML, CSS, que haga consultas sobre el archivo de universidades licenciadas.  El archivo
-     debe ser procesado con una expresión regular para extraer todos sus campos, al estilo del ejemplo unificado.
-	La consulta debe ser una respuesta a un formulario html.
-  - Se debe de trabajar con GIT - GITHUB
-### 2. Campos de Busqueda
-  - NOMBRE
-  - TIPO_GESTION
-  - ESTADO_LICENCIAMIENTO
-  - FECHA_INICIO_LICENCIAMIENTO, FECHA_FIN_LICENCIAMIENTO (PERIODO_LICENCIAMIENTO)
-  - DEPARTAMENTO/PROVINCIA/DISTRITO
-
-## EJECUCION DE LA PAGINA
-       
-- Contruccion de la imagen 
-    -   ```sh
-        docker build -t universidades .
-        ```
+### 3. FLEXIBILIDAD 
+  - Este proyecto tambien podra ayudar a los administradores, a que solo se cambie cierto apartado donde se podran ver la lista de docentes y el cual se podra modificar conforme pasen los semestres y existan cambio de la plana de docentes, esto con el objetivo de que el administrador no tenga dificultades al momento de actualizar la pagina.
 
 - Creacion del contenedor en el puerto 8097
     -   ```sh
