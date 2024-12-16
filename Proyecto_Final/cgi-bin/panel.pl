@@ -53,7 +53,8 @@ print <<'HTML';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta a Docentes</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/styles_panel.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
@@ -62,6 +63,12 @@ print <<'HTML';
         </a>
         <div class="overlay">
             <h1>ENCUESTA A DOCENTES</h1>
+        </div>
+        <!-- Aquí está el logout en la parte superior derecha -->
+        <div class="logout-container">
+            <a href="/cgi-bin/logout.pl">
+                <i class='bx bx-log-out' style="font-size: 24px; color: #000;"></i>
+            </a>
         </div>
     </header>
 
@@ -74,11 +81,9 @@ foreach my $prof (@professors) {
     # Verificar si la imagen existe, si no usar imagen por defecto
     my $image_path = -e "$prof->{image}" ? "$prof->{image}" : $default_image;
 
-    print <<HTML;
-            <div class="professor-card">
-                <a href="cgi/encuesta.cgi?docente=$prof->{id}">
-                    <img src="$image_path" alt="$prof->{name}" class="professor-image">
-                </a>
+print <<HTML;
+            <div class="professor-card" data-id="$prof->{id}" onclick="addToList($prof->{id}, '$prof->{name}', '$image_path')">
+                <img src="$image_path" alt="$prof->{name}" class="professor-image">
                 <p>$prof->{name}</p>
             </div>
 HTML
@@ -86,8 +91,33 @@ HTML
 
 # Imprimir el cierre del HTML
 print <<'HTML';
+
+        </div>
+
+        <div class="crud">
+            <h2>Lista de Encuestas</h2>
+
+            <div id="selected-professors">
+                <h3>Profesores seleccionados</h3>
+                <div id="selected-professors-list">
+                    <!-- Los profesores seleccionados aparecerán aquí -->
+                </div>
+            </div>
+
+            <div>
+                <label for="list-name">Nombre de la lista:</label>
+                <input type="text" id="list-name" name="list_name" required>
+            </div>
+
+            <button type="button" id="create-list-btn" disabled>Crear Lista</button>
+            
+        </div>
+        <h3>Listas creadas</h3>
+        <div id="lists-table">
+            <!-- Las listas se mostrarán aquí -->
         </div>
     </div>
+    <script src="../js/panel.js"></script>
 </body>
 </html>
 HTML

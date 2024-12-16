@@ -13,50 +13,27 @@ loginLink.onclick=() => {
     loginForm.classList.remove('active');
 }
 
-        // Función para mostrar la notificación
-        function showNotification(message) {
-            const notificationDiv = document.createElement("div");
-            notificationDiv.classList.add("notification");
-            notificationDiv.textContent = message;
-            document.body.appendChild(notificationDiv);
-            setTimeout(() => {
-                notificationDiv.style.opacity = '0';
-                setTimeout(() => notificationDiv.remove(), 500);
-            }, 3000);
+document.addEventListener('DOMContentLoaded', function() {
+    const notification = document.getElementById('notification');
+    const notificationMessage = document.getElementById('notification-message');
+
+    // Verificar si hay un mensaje y mostrar la notificación
+    const message = document.querySelector('p').innerText; // Se obtiene el mensaje
+    if (message) {
+        notificationMessage.innerText = message;  // Establece el mensaje de la notificación
+
+        // Mostrar la notificación
+        notification.classList.add('show');
+        
+        // Agregar clase 'error' si el mensaje contiene un error
+        if (message.includes('error')) {
+            notification.classList.add('error');
         }
 
-        // Función para manejar el formulario de login o registro
-        async function handleFormSubmit(event) {
-            event.preventDefault();  // Prevenir que el formulario recargue la página
-            const formData = new FormData(event.target);
-            const action = formData.get('action');
-
-            const response = await fetch('../cgi-bin/login_register.pl', {
-                method: 'POST',
-                body: formData
-            });
-
-            const data = await response.json(); // Recibir la respuesta en formato JSON
-            showNotification(data.message); // Mostrar el mensaje en la página
-        }
-
-        // Asignar el manejador a los formularios
-        document.getElementById('loginForm').addEventListener('submit', handleFormSubmit);
-        document.getElementById('registerForm').addEventListener('submit', handleFormSubmit);
-
-        window.onload = function() {
-            // Verificar si hay un mensaje de notificación
-            var message = document.getElementById('notificationMessage') ? document.getElementById('notificationMessage').innerText : '';
-        
-            if (message) {
-                // Mostrar la notificación
-                var notification = document.getElementById('notification');
-                notification.style.display = 'block';
-                notification.classList.add('show');
-        
-                // Ocultar la notificación después de 5 segundos
-                setTimeout(function() {
-                    notification.style.display = 'none';
-                }, 5000);
-            }
-        };
+        // Ocultar la notificación después de 5 segundos
+        setTimeout(function() {
+            notification.classList.remove('show');
+            setTimeout(() => notification.style.display = 'none', 500); // Asegura que la notificación se oculte
+        }, 5000);
+    }
+});

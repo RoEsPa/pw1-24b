@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+body {
+    background: url(../galery/pagina/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 550px;
+    width: 550px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-box {
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.professor-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    overflow-y: auto; /* Habilitar el desplazamiento vertical */
+    max-height: 300px; /* Limitar la altura de la lista de profesores */
+    padding-right: 10px; /* Evitar que el contenido se corte por la barra de desplazamiento */
+}
+
+.professor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.professor img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.professor .info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.professor .info p {
+    font-size: 16px;
+}
+
+.professor:hover {
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+@media(max-width:768px) {
+    .container {
+        height: 500px;
+        width: 380px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .professor-list {
+        gap: 15px;
+    }
+
+    .professor {
+        padding: 12px;
+    }
+}
+
+@media(max-width:480px) {
+    .container {
+        height: 450px;
+        width: 310px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .professor-list {
+        gap: 10px;
+    }
+
+    .professor {
+        padding: 10px;
+    }
+}
+.logout-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+.logo {
+    width: 40px; /* Ajusta el tamaño del logo */
+    height: auto;
+}

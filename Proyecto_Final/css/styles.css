@@ -277,15 +277,32 @@ body {
     }
 }
 
+/* Estilos para la notificación */
 .notification {
     position: fixed;
-    top: 20px;
+    top: -100px; /* Inicialmente está fuera de la pantalla */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #4CAF50; /* Color de fondo verde para éxito */
+    color: white;
+    padding: 15px;
     border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    width: 80%;  /* Ancho de la notificación */
+    max-width: 600px; /* Máximo ancho */
+    z-index: 1000;
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+/* Notificación visible */
+.notification.show {
+    top: 20px; /* Vuelve a la pantalla */
     opacity: 1;
-    transition: opacity 0.5s ease;
+}
+
+/* Para mensajes de error */
+.notification.error {
+    background-color: #f44336; /* Rojo para error */
 }

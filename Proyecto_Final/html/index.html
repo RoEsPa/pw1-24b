@@ -3,61 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Resultados Encuesta de Profesores</title>
+    <link rel="stylesheet" href="style_p.css">
 </head>
 <body>
+
     <div class="container">
         <div class="form-box">
-            <form action="#" class="loginForm">
-                <h2>Login</h2>
-                <div class="input-box">
-                    <input type="text" required>
-                    <label>Username</label>
-                    <i class='bx bxs-user'></i>
+            <h2>Resultados de los Profesores</h2>
+            <div class="professor-list">
+                <div class="professor">
+                    <img src="../galery/profesores/ESCOBEDO.jpeg" alt="Profesor 1">
+                    <div class="info">
+                        <h3>Profesor 1</h3>
+                        <p>Puntuación: <strong>4.5/5</strong></p>
+                    </div>
                 </div>
-                <div class="input-box">
-                    <input type="password" required>
-                    <label>Password</label>
-                    <i class='bx bxs-lock-alt' ></i>
+                <div class="professor">
+                    <img src="../galery/profesores/CORRALES.jpeg" alt="Profesor 2">
+                    <div class="info">
+                        <h3>Profesor 2</h3>
+                        <p>Puntuación: <strong>4.2/5</strong></p>
+                    </div>
                 </div>
-                <div class="forget-section">
-                    <p>
-                        <input type="checkbox" name="" id="">
-                        Remember Me
-                    </p>
-                    <a href="#">Forgot Password?</a>
+                <div class="professor">
+                    <img src="../galery/profesores/Aedo.jpeg" alt="Profesor 3">
+                    <div class="info">
+                        <h3>Profesor 3</h3>
+                        <p>Puntuación: <strong>4.8/5</strong></p>
+                    </div>
                 </div>
-                <button class="btn">Sign In</button>
-                <div class="account-creation">
-                    <span>Don't have an account? <a href="#" class="registerLink">Register</a></span>
-                </div>
-            </form>
-            <form action="#" class="registerForm">
-                <h2>Register</h2>
-                <div class="input-box">
-                    <input type="text" required>
-                    <label>Username</label>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" required>
-                    <label>Password</label>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" required>
-                    <label>Confirm Password</label>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <button class="btn">Sign Up</button>
-                <div class="account-creation">
-                    <span>Already have an account? <a href="#" class="loginLink">Login</a></span>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-    <script src="../js/login.js"></script>
+
 </body>
 </html>
