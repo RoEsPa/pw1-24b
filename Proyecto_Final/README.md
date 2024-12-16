@@ -89,7 +89,6 @@
 - AYAX
 - CRUD
 - Base de Datos
-## CONTENIDO DE LA GUÍA
 
 ### EXPLICACION DEL PROYECTO
 - El proyecto trata de un apartado de encuesta que va dirigido hacia los estudiantes, el cual falicitara la encuesta que se realiza cada que se finaliiza el semestre,
@@ -106,7 +105,22 @@
   ### 4. ESCALA GENERAL DE CALIFICACION
   - Al culminar la encuesta, se mostrara una pequeña calificación genral de todos los docentes, desde el menor calificado hasta el mayor calificado.
   ![Escala](Capturas/Escala.png)
+## 5. EJECUCION DE LA PAGINA
+       
+- Contruccion de la imagen 
+    -   ```sh
+        docker build -t proyecto_apache .
+        ```
 
+- Creacion del contenedor en el puerto 8094
+    -   ```sh
+        docker run -d -p 8094:8094 --name contenedor_apache proyecto_apache
+        ```
+
+- link de la Pagina
+    -   ```sh
+        http://localhost:8094
+        ```
 ## OBEJTIVO DEL PROYECTO
 ### 1. BIRNDAR FACILIDAD
   - Este proyecto tiene como objetivo ayudar a la Escuela y tambien a la casa Agustin.
@@ -123,64 +137,42 @@
 - Este trabajo fue grupal por que se acordo trabajar en un solo repositorio y los demas trabajando como colaboradores.
     - GitHub en donde se trabajo
     -   ```sh
-        https://github.com/RoEsPa/pw1-24b.git
+        https://github.com/RoEsPa/pw1-24b/tree/main/Proyecto_Final
         ```
 
-    - Aqui se podra ver la lista de commits que se hizo en el repositorio.
+    - Aqui se podra ver la lista de commits que se realizaron en el repositorio.
+       - Comits del Alumno Rodrigo Estefanero Palma
     -   ```sh
-          https://github.com/RoEsPa/pw1-24b/commits/main/
+          https://github.com/RoEsPa/pw1-24b/commits/main/Proyecto_Final?author=RoEsPa
+        ``` 
+        - Rama donde se realizo los comits del Alumno Jose Gabriel Quispe Mamani
+    -   ```sh
+          https://github.com/RoEsPa/pw1-24b/activity?ref=Jose-Gabriel-Quispe-Mamani
         ```
-## COMMITS IMPORTANTES
-### Registro de Commits del Proyecto
-
-Aquí se documentan los principales commits realizados en el proyecto, con una breve descripción de los cambios implementados en cada uno.
-
----
-
-### 1. Script de búsqueda en Perl y archivo CSV
-- **Descripción:** Se da la agregación del archivo csv y del script de búsqueda en el repositorio.
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/6ebe40147752c3c310fb0af1ae8c97979db2f3cf...71d15810af22143bde7fb96041a1ba2bc856d4e3)
-
-
-### 2. Búsqueda por el tipo de gestión
-- **Descripción:** Se agrega un perl para la "Búsqueda por el tipo de gestión".
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/92be900d3fcc4ecf3f3239dd4097352165723619...31e1f33d5b755bd324ff587710700b997443bb8a)
-
-
-### 3. Búsqueda por Fechas
-- **Descripción:** Se agrega un perl para la "Búsqueda por fecha".
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/c0721a24a9bafed5ee236482446a05ac0501328c...a52092806683d73194992da22c96b6d67255b947)
-
-
-### 4. Búsqueda por el Lugar
-- **Descripción:** Se agrega un perl para la "Búsqueda por Departamento-Provincia-Distrito".
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/a52092806683d73194992da22c96b6d67255b947...839abbb25032cdeb98c5b07f13cb4025db1b689a)
-
-
-### 5. Creación del css y html
-- **Descripción:** Se crea la primera base de lo que es la página web.
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/839abbb25032cdeb98c5b07f13cb4025db1b689a...8538ed60783510b2faaa607da30763016c656939)
-- **Este seria la primera vista de ella...**
-![Captura de pantalla](codigoprevio/Captura%20desde%202024-11-06%2023-49-41.png)
-
-### 6. Correción en el cgi-bin
-- **Descripción:** El cambio principal es la validación de las entradas del formulario para garantizar la seguridad y prevenir inyecciones de código, mejorando la confiabilidad del script.
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/commit/8aa645d64db2deafcb8cef97e48abafc01fbd5d1#diff-059487c65404d3f4bb56b6a5aae79908b897b829ff1564b9246f0e34c682a635R1-R3)
+## EXPLICACIONES
 
 
 
-### 7. Corrección en las Tildes
-- **Descripción:** En este commit, se hicieron cambios para que el programa pueda mostrar correctamente letras con tildes y otros caracteres especiales.
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/7339b0ff0c2df6af82dbb37b002f2e812c3c5568...88d025296e80dd91117ee116422a687cd2374b05)
+
+## VIDEOS QUE SIRVIERON DE AYUDA PARA EL PROYECTO
+### 1.Uso de crud
+- [Uso de CRUD con JavaScript - YouTube](https://www.youtube.com/watch?v=KiRKUTDYlG8) - Video tutorial que explica cómo implementar operaciones CRUD utilizando JavaScript.
+  ![Plana](Capturas/Plana.png)
+
+- [Implementación de CRUD en Perl - YouTube](https://www.youtube.com/watch?v=s_Q8fG1wfbI) - Video tutorial que enseña cómo realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) utilizando el lenguaje Perl en aplicaciones web.
+    ![Plana](Capturas/Plana.png)
 
 
+### 2.login/logut
+- [Implementación de Login/Logout - YouTube](https://www.youtube.com/watch?v=9TuQGIVw4XY) - Implementación un sistema de login y logout en una aplicación web.
+  ![Plana](Capturas/Plana.png)
 
-### 8. Mejora visual de la Página Web
-- **Descripción:** Aqui se da las ultimas modificaciones al css y al html para el apartado de la Página Web.
-- **Enlace:** [Ver Cambios](https://github.com/RoEsPa/pw1-24b/compare/76988d4b7e170712e35924e5777b72446635fdc4...bc6ac06ee33c91430a5696da3860527e1d270b0c)
+- [Implementación de Login/Logout con JavaScript - YouTube](https://www.youtube.com/watch?v=wcCVjUpNveg) - Desarrollar un sistema de login y logout utilizando JavaScript.
+  ![Plana](Capturas/Plana.png)
 
-## APARIENCIA FINAL DE LA PAGINA WEB
-![Apariencia Final](img/AparienciaFinal.png)
+### 3.Reporte
+- [Generación de Reportes - YouTube](https://www.youtube.com/watch?v=N0gaK2GJ0So) - Video tutorial que explica cómo generar reportes dinámicos en aplicaciones web.
+
 
 
 ## RUBRICA DE CALIFICACIÓN
@@ -254,11 +246,13 @@ Aquí se documentan los principales commits realizados en el proyecto, con una b
 - [Introducción a CGI en Perl](https://www.tutorialspoint.com/perl/perl_cgi.htm) - Tutorial sobre cómo crear scripts CGI en Perl para desarrollo web.
 - [Uso de Docker para entornos Perl](https://docs.docker.com/samples/perl/) - Documentación oficial de Docker para la configuración de entornos Perl.
 - [Creación de archivos Dockerfile](https://docs.docker.com/engine/reference/builder/) - Documentación para configurar y escribir un Dockerfile.
-- [Métodos HTTP GET y POST](https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/get-vs-post/) - Explicación de la diferencia entre métodos HTTP GET y POST.
 - [Uso del elemento `<div>` en HTML](https://developer.mozilla.org/es/docs/Web/HTML/Element/div) - Guía sobre el uso del elemento `<div>` para estructurar el contenido en HTML.
 - [Estilos modernos con CSS](https://developer.mozilla.org/es/docs/Web/CSS) - Documentación para crear estilos CSS modernos.
 - [Configuración de un servidor web Apache en Docker](https://hub.docker.com/_/httpd) - Información para ejecutar un servidor web Apache en Docker.
-
+- [¿Qué es AJAX? - AWS](https://aws.amazon.com/es/what-is/ajax/) - Información sobre AJAX, sus beneficios, funcionamiento y cómo permite la comunicación asíncrona entre cliente y servidor sin recargar páginas web.
+- [¿Qué es CRUD? - HubSpot](https://blog.hubspot.es/website/que-es-crud) - Explicación de qué es CRUD, su significado en el desarrollo web, y cómo las operaciones Crear, Leer, Actualizar y Eliminar son fundamentales para manejar bases de datos.
+- [¿Qué es una base de datos SQL? - TIC Portal](https://www.ticportal.es/glosario-tic/base-datos-sql) - Introducción a las bases de datos SQL, cómo funcionan, sus características principales y su importancia en la gestión de datos estructurados.
+- [Cómo obtener variables de sesión en JavaScript - Bito.ai](https://bito.ai/resources/javascript-get-session-variable-javascript-explained/) - Guía sobre cómo acceder a las variables de sesión en JavaScript, explicando su uso y cómo se pueden gestionar en el navegador.
 
 
 #
