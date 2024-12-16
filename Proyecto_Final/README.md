@@ -96,16 +96,16 @@
   esta pagina tendra los siguientes apartados:
   ### 1. INGRESO CON EL CORREO INSTITUCIONAL
   - Esto se podra hacer de manera que garantize el anonimato del que realizara la encuesta, esto por el temor a que se pueda detectar al encuestador por el solo ingreso de su correo.
-  ![Ingreso](img/AparienciaFinal.png)
+  ![Ingreso](Capturas/Ingreso.png)
   ### 2. APARTADO DE LOS DOCENTE
   - Aqui se mostraran los Docentes de la Escuela, se podra vizualizar al docente y para la realizacion de la encuesta, solo se debera hacer click a la fotografia del docente.
-  ![Plana](img/AparienciaFinal.png)
+  ![Plana](Capturas/Plana.png)
   ### 3. ENCUESTA
   - En este aparatado se mostrara la encuesta que constara de 5 preguntas que se podran calificar con una escala del 1 al 5, tambien como ultimo apartado se podra dar una opinion del docente encuestado.
-  ![Encuesta](img/AparienciaFinal.png)
+  ![Encuesta](Capturas/Encuesta.png)
   ### 4. ESCALA GENERAL DE CALIFICACION
   - Al culminar la encuesta, se mostrara una pequeña calificación genral de todos los docentes, desde el menor calificado hasta el mayor calificado.
-  ![Escala](img/AparienciaFinal.png)
+  ![Escala](Capturas/Escala.png)
 
 ## OBEJTIVO DEL PROYECTO
 ### 1. BIRNDAR FACILIDAD
