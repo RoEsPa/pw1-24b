@@ -157,22 +157,22 @@
 ## VIDEOS QUE SIRVIERON DE AYUDA PARA EL PROYECTO
 ### 1.Uso de crud
 - [Uso de CRUD con JavaScript - YouTube](https://www.youtube.com/watch?v=KiRKUTDYlG8) - Video tutorial que explica cómo implementar operaciones CRUD utilizando JavaScript.
-  ![Plana](Capturas/Plana.png)
+  ![Plana](Capturas/CRUD-JS.png)
 
 - [Implementación de CRUD en Perl - YouTube](https://www.youtube.com/watch?v=s_Q8fG1wfbI) - Video tutorial que enseña cómo realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) utilizando el lenguaje Perl en aplicaciones web.
-    ![Plana](Capturas/Plana.png)
+    ![Plana](Capturas/CRUD-PERL.png)
 
 
 ### 2.login/logut
 - [Implementación de Login/Logout - YouTube](https://www.youtube.com/watch?v=9TuQGIVw4XY) - Implementación un sistema de login y logout en una aplicación web.
-  ![Plana](Capturas/Plana.png)
+  ![Plana](Capturas/LOGIN.png)
 
 - [Implementación de Login/Logout con JavaScript - YouTube](https://www.youtube.com/watch?v=wcCVjUpNveg) - Desarrollar un sistema de login y logout utilizando JavaScript.
-  ![Plana](Capturas/Plana.png)
+  ![Plana](Capturas/LOGIN-JS.png)
 
 ### 3.Reporte
 - [Generación de Reportes - YouTube](https://www.youtube.com/watch?v=N0gaK2GJ0So) - Video tutorial que explica cómo generar reportes dinámicos en aplicaciones web.
-
+  ![Plana](Capturas/REGISTRO.png)
 
 
 ## RUBRICA DE CALIFICACIÓN
