@@ -117,15 +117,6 @@
 ### 3. FLEXIBILIDAD 
   - Este proyecto tambien podra ayudar a los administradores, a que solo se cambie cierto apartado donde se podran ver la lista de docentes y el cual se podra modificar conforme pasen los semestres y existan cambio de la plana de docentes, esto con el objetivo de que el administrador no tenga dificultades al momento de actualizar la pagina.
 
-- Creacion del contenedor en el puerto 8097
-    -   ```sh
-        docker run -d -p 8097:80 universidades
-        ```
-
-- link de la Pagina
-    -   ```sh
-        http://localhost:8097/
-        ```
 
 ## REPOSITORIO EN DONDE SE TRABAJO
 
