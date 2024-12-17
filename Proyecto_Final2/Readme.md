@@ -10,51 +10,60 @@ Este proyecto utiliza **Docker** para configurar un servidor **Apache2** con sop
 .
 ├── Dockerfile   # Configuración de Apache2 y CGI
 └── login.pl     # Script Perl para autenticación de usuarios
-🛠 Configuración y Ejecución
-1. Construir la Imagen Docker
-bash
-Copiar código
-docker build -t apache-cgi-perl .
-2. Ejecutar el Contenedor
-bash
-Copiar código
-docker run -d -p 8080:80 --name apache-cgi apache-cgi-perl
-3. Probar el Script
-Accede a la URL:
+```
 
-bash
-Copiar código
-http://localhost:8080/cgi-bin/login.pl?user=testUser&password=1234
-💻 Explicación Rápida
-Dockerfile
-Paso	Descripción
-a2enmod cgi	Habilita el módulo CGI en Apache.
-COPY login.pl ...	Copia el script a /usr/lib/cgi-bin/.
-chmod +x login.pl	Asigna permisos de ejecución al script.
-Script login.pl
-El script recibe user y password como parámetros GET y devuelve una respuesta en XML.
+## 🛠 Configuración y Ejecución
 
-Ejemplo de Respuesta Exitosa:
+1. **Construir la Imagen Docker**
+    ```bash
+    docker build -t apache-cgi-perl .
+    ```
 
-xml
-Copiar código
+2. **Ejecutar el Contenedor**
+    ```bash
+    docker run -d -p 8080:80 --name apache-cgi apache-cgi-perl
+    ```
+
+3. **Probar el Script**
+    Accede a la URL:
+    ```bash
+    http://localhost:8080/cgi-bin/login.pl?user=testUser&password=1234
+    ```
+
+## 💻 Explicación Rápida
+
+### Dockerfile
+
+| Paso               | Descripción                               |
+|--------------------|-------------------------------------------|
+| `a2enmod cgi`      | Habilita el módulo CGI en Apache.         |
+| `COPY login.pl ...`| Copia el script a `/usr/lib/cgi-bin/`.    |
+| `chmod +x login.pl`| Asigna permisos de ejecución al script.   |
+
+### Script `login.pl`
+
+El script recibe `user` y `password` como parámetros GET y devuelve una respuesta en XML.
+
+**Ejemplo de Respuesta Exitosa:**
+
+```xml
 <?xml version='1.0' encoding='utf-8'?>
 <response>
     <status>success</status>
 </response>
-✅ Pruebas
-Usando Curl
-bash
-Copiar código
+```
+
+## ✅ Pruebas
+
+**Usando Curl**
+
+```bash
 curl "http://localhost:8080/cgi-bin/login.pl?user=testUser&password=1234"
-⚠️ Notas
-Configura las credenciales de base de datos en login.pl.
-Asegúrate de que el script tenga permisos de ejecución (chmod +x).
+```
+
+## ⚠️ Notas
+
+- Configura las credenciales de base de datos en `login.pl`.
+- Asegúrate de que el script tenga permisos de ejecución (`chmod +x`).
+
 ¡Listo! 🚀 Tu servidor Apache2 con CGI está configurado y listo para pruebas.
-
-Copiar código
-
-
-
-
-
