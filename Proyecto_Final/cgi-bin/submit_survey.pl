@@ -11,8 +11,8 @@ my $professor_id = $q->param('professorId');
 my $list_id = $q->param('listId');
 
 # Conectar a la base de datos
-my $dsn = "DBI:mysql:login_db:localhost";
-my $username = "root";  # Cambia esto por tu usuario de base de datos
+my $dsn = "DBI:mysql:login_db:127.0.0.1";
+my $username = "pw";  # Cambia esto por tu usuario de base de datos
 my $password = "rep";  # Cambia esto por tu contraseña de base de datos
 my $dbh = DBI->connect($dsn, $username, $password, { RaiseError => 1, AutoCommit => 1 })
     or die "No se pudo conectar a la base de datos: $DBI::errstr";

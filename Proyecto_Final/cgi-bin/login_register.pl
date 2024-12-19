@@ -12,8 +12,8 @@ use CGI::Session;
 binmode(STDIN, ":utf8");  # Establece que la entrada será en UTF-8
 
 # Configuración de la conexión a la base de datos
-my $dsn = "DBI:mysql:login_db:localhost";
-my $usuario_db = "root";
+my $dsn = "DBI:mysql:database=login_db;host=127.0.0.1";
+my $usuario_db = "pw";
 my $password_db = "rep";
 
 # Obtener los datos del formulario
@@ -26,10 +26,13 @@ my $action = param('action') || '';
 my $dbh = DBI->connect($dsn, $usuario_db, $password_db, { RaiseError => 1, AutoCommit => 1 })
     or die "No se pudo conectar a la base de datos: $DBI::errstr";
 
+# Iniciar la sesión CGI
+my $session = CGI::Session->new() or die CGI::Session->errstr;
+
 # Función para registrar un nuevo usuario
 sub register_user {
     if ($password ne $confirm_password) {
-        return { message => "Las contraseñas no coinciden" };
+        return { success => 0, message => "Las contraseñas no coinciden" };
     }
 
     # Encriptar la contraseña con SHA-256
@@ -38,16 +41,15 @@ sub register_user {
     # Insertar el nuevo usuario en la base de datos
     my $sql = "INSERT INTO usuarios (username, password) VALUES (?, ?)";
     my $sth = $dbh->prepare($sql);
-    $sth->execute($username, $hashed_password);
+    eval {
+        $sth->execute($username, $hashed_password);
+    };
+    if ($@) {
+        return { success => 0, message => "Error al registrar el usuario: $@" };
+    }
 
-    return { message => "Registro exitoso. Ahora puedes iniciar sesión." };
+    return { success => 1, message => "Registro exitoso. Ahora puedes iniciar sesión." };
 }
-
-# Iniciar la sesión CGI
-my $session = CGI::Session->new() or die CGI::Session->errstr;
-
-# Establecer el tiempo de expiración de la sesión (30 minutos)
-$session->expire('+30m');  # La sesión expirará después de 30 minutos de inactividad
 
 # Función para hacer login
 sub login_user {
@@ -64,7 +66,6 @@ sub login_user {
     # Verificar la contraseña encriptada
     my $hashed_input = sha256_hex($password);
     if ($hashed_input eq $row->{password}) {
-
         $session->param('logged_in', 1);
         $session->param('username', $username);
         $session->param('user_id', $row->{id});
@@ -81,9 +82,11 @@ if ($action eq 'login') {
     $response = login_user();
     if ($response->{success}) {
         # Redirigir si el login fue exitoso
-        print redirect(-uri => 'panel.pl');  # Cambia 'welcome.pl' por tu página de destino
+        print redirect(-uri => 'panel.pl');  # Cambia 'panel.pl' por tu página de destino
         exit;
     }
+} elsif ($action eq 'register') {
+    $response = register_user();
 } else {
     $response = { message => "Acción no válida: $action" };
 }

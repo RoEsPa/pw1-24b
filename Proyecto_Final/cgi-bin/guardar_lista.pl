@@ -6,8 +6,8 @@ use JSON;
 use DBI;
 
 # Configura la base de datos
-my $dsn = 'DBI:mysql:login_db';
-my $username = 'root';  # Cambia por tu usuario
+my $dsn = "DBI:mysql:login_db:127.0.0.1";
+my $username = 'pw';  # Cambia por tu usuario
 my $password = 'rep';  # Cambia por tu contraseña
 my $dbh = DBI->connect($dsn, $username, $password, { RaiseError => 1, AutoCommit => 1 });
 

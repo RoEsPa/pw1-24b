@@ -3,12 +3,12 @@ const registerForm = document.querySelector(".registerForm");
 const registerLink = document.querySelector(".registerLink");
 const loginLink = document.querySelector(".loginLink");
 
-registerLink.onclick=() => {
+registerLink.onclick = () => {
     registerForm.classList.add('active');
     loginForm.classList.add('active');
 }
 
-loginLink.onclick=() => {
+loginLink.onclick = () => {
     registerForm.classList.remove('active');
     loginForm.classList.remove('active');
 }
@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const notificationMessage = document.getElementById('notification-message');
 
     // Verificar si hay un mensaje y mostrar la notificación
-    const message = document.querySelector('p').innerText; // Se obtiene el mensaje
+    const message = notificationMessage.innerText;
     if (message) {
-        notificationMessage.innerText = message;  // Establece el mensaje de la notificación
+        notification.style.display = 'block';  // Mostrar la notificación
 
-        // Mostrar la notificación
+        // Agregar clase 'show' para animación
         notification.classList.add('show');
         
         // Agregar clase 'error' si el mensaje contiene un error
-        if (message.includes('error')) {
+        if (message.toLowerCase().includes('error')) {
             notification.classList.add('error');
         }
 

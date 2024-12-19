@@ -31,8 +31,8 @@ while (my $row = $csv->getline($fh)) {
 close $fh;
 
 # Conectar a la base de datos
-my $dsn = "DBI:mysql:login_db:localhost";
-my $username = "root";
+my $dsn = "DBI:mysql:login_db:127.0.0.1";
+my $username = "pw";
 my $password = "rep";
 my $dbh = DBI->connect($dsn, $username, $password, { RaiseError => 1, AutoCommit => 1 })
     or die "No se pudo conectar a la base de datos: $DBI::errstr";
