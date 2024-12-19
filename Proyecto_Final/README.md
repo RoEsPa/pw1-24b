@@ -20,7 +20,7 @@
 </div>
 
 <div align="center">
-<span style="font-weight:bold;">GUÍA DE LABORATORIO</span><br />
+<span style="font-weight:bold;">PROYECTO FINAL</span><br />
 </div>
 
 
@@ -30,25 +30,24 @@
 </theader>
 <tbody>
 <tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 1</td></tr>
-<tr><td>TÍTULO DEL PROYECTO:</td><td colspan="5">ENCUEST
+<tr><td>TÍTULO DEL PROYECTO:</td><td colspan="5">ENCUEST DOCENTS
 </td></tr>
 <tr>
 <td>PROYECTO:</td><td>01</td><td>AÑO LECTIVO:</td><td>2024 b</td><td>NRO. SEMESTRE:</td><td>II</td>
 </tr>
 <tr>
-<td>FECHA INICIO:</td><td>12-Nov-2024</td><td>FECHA FIN:</td><td>16-Dic-2024</td><td>DURACIÓN:</td><td>04 horas</td>
+<td>FECHA INICIO:</td><td>12-Nov-2024</td><td>FECHA FIN:</td><td>18-Dic-2024</td><td>DURACIÓN:</td><td>04 horas</td>
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
-        <li><a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></li>
-        <li><a href="https://guides.github.com/">https://guides.github.com/</a></li>        
-        <li><a href="https://www.perl.org/get.html">https://www.perl.org/get.html</a></li>
+      <li><a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></li>
+      <li><a href="https://guides.github.com/">https://guides.github.com/</a></li>        
+      <li><a href="https://www.perl.org/get.html">https://www.perl.org/get.html</a></li>
     </ul>
-</td>
 </<tr>
 <tr><td colspan="6">DOCENTES:
 <ul>
-<li>Richart Smith Escobedo Quispe - rescobedoq@unsa.edu.pe</li>
+<li>Richart Smith Escobedo Quispe - Carlo Jose Luis Corrales Delgado</li>
  </ul>
       </td>
     </tr>
@@ -64,12 +63,24 @@
   </tbody>
 </table>
 
-# Git - GitHub - Perl
+# Git - GitHub - Perl - Docker - JS - SQL
 
 
 [![Git][Git]][git-site]
 [![GitHub][GitHub]][github-site]
 [![Perl][Perl]][perl-site]
+[![Docker][Docker]][docker-site]
+[![JavaScript][JavaScript]][javascript-site]
+[![MySQL][MySQL]][mysql-site]
+
+[Docker]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[docker-site]: https://www.docker.com/
+
+[JavaScript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[javascript-site]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+[MySQL]: https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white
+[mysql-site]: https://www.mysql.com/
 
 #
 
@@ -77,8 +88,14 @@
 
 ### OBJETIVOS
 
-- Poner en practica lo aprendido tanto las clases de laboratorio como las de teoria.
-- Tener la capacidad de dominar los temas avanzados para realizar el proyecto.
+- Poner en práctica lo aprendido tanto en las clases de laboratorio como en las de teoría, aplicando los conocimientos adquiridos de manera integral.
+- Desarrollar la capacidad de dominar los temas avanzados necesarios para la realización del proyecto, demostrando un entendimiento profundo y la habilidad de implementar soluciones efectivas.
+- Fomentar el trabajo en equipo y la colaboración, aprovechando las fortalezas individuales para alcanzar los objetivos comunes del proyecto.
+- Mejorar las habilidades de investigación y autoaprendizaje, buscando y utilizando recursos adicionales para resolver problemas y optimizar el desarrollo del proyecto.
+- Desarrollar competencias en el uso de herramientas y tecnologías modernas, como Docker, Git, GitHub, Perl, JavaScript, y bases de datos SQL, aplicándolas de manera práctica en el proyecto.
+- Promover la creatividad y la innovación en la solución de problemas, incentivando la búsqueda de enfoques novedosos y eficientes para el desarrollo del proyecto.
+- Evaluar y mejorar continuamente el proyecto, implementando buenas prácticas de desarrollo y asegurando la calidad del código y la funcionalidad del producto final.
+- Prepararse para enfrentar desafíos reales en el ámbito profesional, aplicando los conocimientos y habilidades adquiridos en un entorno de desarrollo colaborativo y dinámico.
 
 ### TEMAS Y HERRAMIENTAS
 - Docker
@@ -90,46 +107,120 @@
 - CRUD
 - Base de Datos
 
-### EXPLICACION DEL PROYECTO
-- El proyecto trata de un apartado de encuesta que va dirigido hacia los estudiantes, el cual falicitara la encuesta que se realiza cada que se finaliiza el semestre,
-  esta pagina tendra los siguientes apartados:
-  ### 1. INGRESO CON EL CORREO INSTITUCIONAL
-  - Esto se podra hacer de manera que garantize el anonimato del que realizara la encuesta, esto por el temor a que se pueda detectar al encuestador por el solo ingreso de su correo.
-  ![Ingreso](Capturas/Ingreso.png)
-  ### 2. APARTADO DE LOS DOCENTE
-  - Aqui se mostraran los Docentes de la Escuela, se podra vizualizar al docente y para la realizacion de la encuesta, solo se debera hacer click a la fotografia del docente.
-  ![Plana](Capturas/Plana.png)
-  ### 3. ENCUESTA
-  - En este aparatado se mostrara la encuesta que constara de 5 preguntas que se podran calificar con una escala del 1 al 5, tambien como ultimo apartado se podra dar una opinion del docente encuestado.
-  ![Encuesta](Capturas/Encuesta.png)
-  ### 4. ESCALA GENERAL DE CALIFICACION
-  - Al culminar la encuesta, se mostrara una pequeña calificación genral de todos los docentes, desde el menor calificado hasta el mayor calificado.
-  ![Escala](Capturas/Escala.png)
-## 5. EJECUCION DE LA PAGINA
-       
-- Contruccion de la imagen 
-    -   ```sh
-        docker build -t proyecto_apache .
-        ```
+## EXPLICACIÓN DEL PROYECTO
 
-- Creacion del contenedor en el puerto 8094
-    -   ```sh
-        docker run -d -p 8094:8094 --name contenedor_apache proyecto_apache
-        ```
+El proyecto consiste en una plataforma de encuestas dirigida a los estudiantes, diseñada para facilitar la recolección de opiniones al finalizar cada semestre. La página web incluirá los siguientes apartados:
 
-- link de la Pagina
-    -   ```sh
-        http://localhost:8094
-        ```
-## OBEJTIVO DEL PROYECTO
-### 1. BIRNDAR FACILIDAD
-  - Este proyecto tiene como objetivo ayudar a la Escuela y tambien a la casa Agustin.
-    
-### 2. TRANSPARENCIA
-  - Esto se refiere a que se podra garantizar si el docente con mayor espectativas se vea reflejado en la escala general de todos los docentes.
-    
-### 3. FLEXIBILIDAD 
-  - Este proyecto tambien podra ayudar a los administradores, a que solo se cambie cierto apartado donde se podran ver la lista de docentes y el cual se podra modificar conforme pasen los semestres y existan cambio de la plana de docentes, esto con el objetivo de que el administrador no tenga dificultades al momento de actualizar la pagina.
+### 1. Ingreso con el Correo Institucional
+Este apartado permitirá a los estudiantes ingresar utilizando su correo institucional, garantizando el anonimato del encuestador para evitar cualquier temor a ser identificado.
+![Ingreso](Capturas/Ingreso.png)
+
+```PERL 
+# Obtener los datos del formulario
+my $username = param('username');
+my $password = param('password');
+my $confirm_password = param('confirm_password');
+my $action = param('action') || '';
+
+# Conectar a la base de datos
+my $dbh = DBI->connect($dsn, $usuario_db, $password_db, { RaiseError => 1, AutoCommit => 1 })
+    or die "No se pudo conectar a la base de datos: $DBI::errstr";
+
+```
+
+### 2. Apartado de los Docentes
+En esta sección se mostrarán los docentes de la Escuela. Los estudiantes podrán visualizar a cada docente y, para realizar la encuesta, solo deberán hacer clic en la fotografía del docente correspondiente.
+![Plana](Capturas/Plana.png)
+
+```perl
+# Bucle para generar cada tarjeta de profesor
+foreach my $prof (@professors) {
+    # Verificar si la imagen existe, si no usar imagen por defecto
+    my $image_path = -e "$prof->{image}" ? "$prof->{image}" : $default_image;
+
+print <<HTML;
+            <div class="professor-card" data-id="$prof->{id}" onclick="addToList($prof->{id}, '$prof->{name}', '$image_path')">
+                <img src="$image_path" alt="$prof->{name}" class="professor-image">
+                <p>$prof->{name}</p>
+            </div>
+HTML
+}
+```
+
+### 3. Encuesta
+Este apartado presentará la encuesta, que constará de cinco preguntas calificables en una escala del 1 al 5. Además, se incluirá un espacio para que los estudiantes puedan dar su opinión sobre el docente encuestado.
+![Encuesta](Capturas/Encuesta.png)
+
+```perl
+# Obtener los profesores seleccionados para el listId
+my $sth = $dbh->prepare("SELECT profesores_seleccionados FROM listas_encuestas WHERE id = ?");
+$sth->execute($list_id);
+
+my $professors_selected = "";
+if (my $row = $sth->fetchrow_hashref) {
+    $professors_selected = $row->{profesores_seleccionados};
+}
+
+# Si no se encontró el listId o no hay profesores seleccionados, redirigir al error.pl
+unless ($professors_selected) {
+    print $q->redirect('error.pl');
+    exit;
+}
+```
+
+### 4. Escala General de Calificación
+Al finalizar la encuesta, se mostrará una calificación general de todos los docentes, ordenada desde el menor calificado hasta el mayor calificado.
+![Escala](Capturas/Escala.png)
+
+```perl
+# Consulta para obtener las puntuaciones de la tabla correcta
+my $sth = $dbh->prepare("SELECT id_profesor, 
+                                AVG((calidad_ensenanza + recomendacion + descripcion_clases + probabilidad_extra) / 4) AS avg_score
+                         FROM encuestas
+                         GROUP BY id_profesor");
+$sth->execute();
+
+# Almacenar las puntuaciones en un hash
+my %scores;
+while (my $row = $sth->fetchrow_hashref) {
+    $scores{$row->{id_profesor}} = $row->{avg_score};
+}
+```
+### 5. SCRIPTS NO VISIBLES
+En esta sección se detallan los scripts que no son visibles para los usuarios, pero que son fundamentales para el correcto funcionamiento de la plataforma de encuestas. Estos scripts se encargan de procesar los datos de las encuestas, calcular las calificaciones de los docentes y generar los informes necesarios. A continuación, se presenta una descripción de los principales scripts utilizados:
+
+- **Script de Procesamiento de Encuestas**: Este script se ejecuta en segundo plano y se encarga de recibir las respuestas de las encuestas, almacenarlas en la base de datos y validar que los datos ingresados sean correctos.
+- **Script de Cálculo de Calificaciones**: Una vez que las encuestas han sido procesadas, este script calcula la calificación promedio de cada docente. Utiliza algoritmos avanzados para asegurar que las calificaciones sean precisas y reflejen de manera justa el desempeño de los docentes.
+- **Script de Generación de Sesiones**: Este script se encarga de gestionar las sesiones de los usuarios en la plataforma. Asegura que cada usuario tenga una sesión única y segura, permitiendo el acceso a las funcionalidades de la plataforma de manera controlada y protegiendo la información personal de los usuarios.
+
+Estos scripts son esenciales para garantizar que la plataforma de encuestas funcione de manera eficiente y que los resultados sean confiables y útiles para todos los involucrados.
+
+## EJECUCIÓN DE LA PÁGINA
+
+### Construcción de la imagen
+```sh
+docker build -t lappw .
+```
+
+### Creación del contenedor en el puerto 8094
+```sh
+docker run -d -p 80:80 --name goofy_morse lappw
+```
+
+### Enlace de la página
+```sh
+http://localhost
+```
+## MEJORAS PARA EL FUTURO
+
+- Implementar autenticación multifactor para aumentar la seguridad del acceso a la plataforma.
+- Desarrollar una aplicación móvil para facilitar el acceso y la participación de los estudiantes desde sus dispositivos móviles.
+- Integrar análisis de datos avanzados para proporcionar informes más detallados y útiles sobre las encuestas realizadas.
+- Añadir soporte para múltiples idiomas para hacer la plataforma accesible a una audiencia más amplia.
+- Mejorar la interfaz de usuario para hacerla más intuitiva y fácil de usar.
+- Implementar notificaciones automáticas para recordar a los estudiantes que completen las encuestas.
+- Optimizar el rendimiento del sistema para manejar un mayor volumen de usuarios simultáneamente.
+- Incorporar inteligencia artificial para analizar las respuestas y proporcionar retroalimentación personalizada a los docentes.
 
 
 ## REPOSITORIO EN DONDE SE TRABAJO
@@ -149,30 +240,16 @@
     -   ```sh
           https://github.com/RoEsPa/pw1-24b/activity?ref=Jose-Gabriel-Quispe-Mamani
         ```
-## EXPLICACIONES
 
+        ## VIDEOS DE MUESTRA DEL PROYECTO
 
+        Para una mejor comprensión del proyecto y su funcionamiento, hemos preparado una serie de videos demostrativos. Estos videos muestran paso a paso cómo utilizar la plataforma de encuestas, desde el inicio de sesión hasta la visualización de los resultados. A continuación, se presentan los enlaces a los videos:
 
+        - [Video de Introducción y Funcionalidades Básicas](https://youtu.be/4ZIS8X1UvwM): Este video proporciona una visión general del proyecto, destacando las características principales y cómo los estudiantes pueden interactuar con la plataforma.
+        - [Video de Ejecución y Pruebas](https://youtu.be/tTjxtSHGV0k): En este video, se muestra la ejecución del proyecto en un entorno real, incluyendo pruebas de las diferentes funcionalidades implementadas.
 
-## VIDEOS QUE SIRVIERON DE AYUDA PARA EL PROYECTO
-### 1.Uso de crud
-- [Uso de CRUD con JavaScript - YouTube](https://www.youtube.com/watch?v=KiRKUTDYlG8) - Video tutorial que explica cómo implementar operaciones CRUD utilizando JavaScript.
-  ![Plana](Capturas/CRUD-JS.png)
+        Estos videos son una herramienta valiosa para entender mejor el alcance y la utilidad de la plataforma, así como para observar su desempeño en un entorno práctico.
 
-- [Implementación de CRUD en Perl - YouTube](https://www.youtube.com/watch?v=s_Q8fG1wfbI) - Video tutorial que enseña cómo realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) utilizando el lenguaje Perl en aplicaciones web.
-    ![Plana](Capturas/CRUD-PERL.png)
-
-
-### 2.login/logut
-- [Implementación de Login/Logout - YouTube](https://www.youtube.com/watch?v=9TuQGIVw4XY) - Implementación un sistema de login y logout en una aplicación web.
-  ![Plana](Capturas/LOGIN.png)
-
-- [Implementación de Login/Logout con JavaScript - YouTube](https://www.youtube.com/watch?v=wcCVjUpNveg) - Desarrollar un sistema de login y logout utilizando JavaScript.
-  ![Plana](Capturas/LOGIN-JS.png)
-
-### 3.Reporte
-- [Generación de Reportes - YouTube](https://www.youtube.com/watch?v=N0gaK2GJ0So) - Video tutorial que explica cómo generar reportes dinámicos en aplicaciones web.
-  ![Plana](Capturas/REGISTRO.png)
 
 
 ## RUBRICA DE CALIFICACIÓN
@@ -270,6 +347,15 @@
 [![Git][Git]][git-site]
 [![GitHub][GitHub]][github-site]
 [![Perl][Perl]][perl-site]
+[![Docker][Docker]][docker-site]
+[![JavaScript][JavaScript]][javascript-site]
+[![MySQL][MySQL]][mysql-site]
 
+[Docker]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[docker-site]: https://www.docker.com/
 
+[JavaScript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[javascript-site]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
+[MySQL]: https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white
+[mysql-site]: https://www.mysql.com/
